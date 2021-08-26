@@ -14,3 +14,9 @@
 
     <!-- App js -->
     <script src="{{asset('dashboard/assets/js/app.js')}}"></script>
+
+    <script>
+        setTimeout(function(){
+            $('#alert').slideUp();
+        },4000);
+    </script>

@@ -32,10 +32,10 @@ class LoginController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::guard('admin')->attempt($credentials)) {
-            return redirect()->intended($this->redirectPath())->withSuccess('Signed in');
+            return redirect()->intended($this->redirectPath())->withSuccess('تم تسجيل الدخول بنجاح أهلا بك ');
         }
   
-        return redirect('admin')->withSuccess('Login details are not valid');
+        return redirect('admin')->with('error','لم يتم تسجيل الدخول راجع بياناتك ');
 
     }
 

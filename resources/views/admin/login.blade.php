@@ -29,15 +29,16 @@
     <!-- Begin page -->
     <div class="accountbg"></div>
     <div class="home-btn d-none d-sm-block">
-        <a href="index.html" class="text-white"><i class="fas fa-home h2"></i></a>
+        <a href="{{route('website')}}" class="text-white"><i class="fas fa-home h2"></i></a>
     </div>
     <div class="wrapper-page">
+        @include('admin.layouts.notification')
         <div class="card card-pages shadow-none">
-
             <div class="card-body">
                 <div class="text-center m-t-0 m-b-15">
-                    <a href="index.html" class="logo logo-admin"><img src="{{asset('dashboard/assets/images/logo-dark.png')}}" alt="" height="24"></a>
+                    <a href="" class="logo logo-admin"><img src="{{asset('dashboard/assets/images/logo-dark.png')}}" alt="" height="24"></a>
                 </div>
+
                 <h5 class="font-18 text-center" style="font-family: cairo;">تسجيل الدخول</h5>
 
                 <form class="form-horizontal m-t-30" method="POST" action="{{route('admin.login')}}">
@@ -96,7 +97,11 @@
 
     <!-- App js -->
     <script src="{{asset('dashboard/assets/js/app.js')}}"></script>
-
+    <script>
+        setTimeout(function(){
+            $('#alert').slideUp();
+        },5000);
+    </script>
 </body>
 
 

@@ -15,10 +15,11 @@
     <link href="{{asset('dashboard/assets/css/icons.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('dashboard/assets/css/style.css')}}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 </head>
 <style>
       body {
         font-family: 'Cairo';
-        /* font-size: 16px; */
+        /* font-size: 22px; */
     }
 </style>

@@ -18,7 +18,7 @@ class AdminSeeder extends Seeder
 
             'name'=>'Super Admin',
             'email'=>'solution_maker@admin.com',
-            'password'=>bcrypt('123123')
+            'password'=>bcrypt('123123'),
 
         ]);
     }

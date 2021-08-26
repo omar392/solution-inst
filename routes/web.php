@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('website');
 
 Route::get('command', function () {
     \Artisan::call('route:clear');
@@ -26,6 +26,9 @@ Route::get('command', function () {
 
     });
 
-Auth::routes();
+Auth::routes([
+'register'=>false,
+'login'=>false,
+]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
