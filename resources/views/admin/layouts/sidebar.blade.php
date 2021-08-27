@@ -13,6 +13,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('blog.index')}}" class="waves-effect">
+                                <i class="far fa-edit"></i><span style="font-family: cairo;">  المدونة و المقالات  </span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('team.index')}}" class="waves-effect">
                                 <i class="fas fa-user-friends"></i><span style="font-family: cairo;"> فريق العمل  </span>
                             </a>

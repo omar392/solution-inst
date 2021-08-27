@@ -7,12 +7,12 @@
             <div class="page-title-box">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
-                        <h4 class="page-title" style="font-family: cairo;">فريق العمل</h4>
+                        <h4 class="page-title" style="font-family: cairo;">المدونة و المقالات</h4>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item"><a href="{{ route('adminhome') }}">الرئيسية</a></li>
-                            <li class="breadcrumb-item active">فريق العمل</li>
+                            <li class="breadcrumb-item active">المدونة و المقالات</li>
                         </ol>
                     </div>
                 </div> <!-- end row -->
@@ -21,8 +21,7 @@
                     <div class="text-center">
                         <!-- Large modal -->
                         <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal"
-                            data-target=".bs-example-modal-lg"><i class="fas fa-plus-circle"></i> إضافة عضو فريق
-                            عمل</button>
+                            data-target=".bs-example-modal-lg"><i class="fas fa-plus-circle"></i> إضافة مقال</button>
                     </div>
                     <!--  Modal content for the above example -->
                     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
@@ -134,11 +133,9 @@
                                                 <td>{{ $item->name_en }}</td>
                                                 <td>{{ $item->job_ar }}</td>
                                                 <td>{{ $item->job_en }}</td>
-                                                <td>
-                                                    <img src="{{ !empty($item->image) ? url('upload/team/' . $item->image) : url('upload/no_image.jfif') }}"
+                                                <td><img src="{{ !empty($item->image) ? url('upload/team/' . $item->image) : url('upload/no_image.jfif') }}"
                                                         width="100px" height="110px" alt="image"
-                                                        style="border-radius: 70px;">
-                                                </td>
+                                                        style="border-radius: 70px;"></td>
                                                 <td>
                                                     <input type="checkbox" name="toogle" value="{{ $item->id }}"
                                                         data-toggle="toggle" {{ $item->status == 'active' ? 'checked' : '' }}
@@ -161,10 +158,11 @@
                                                                     class="fa fa-trash"></i></button></a>
                                                     </form>
                                                 </td>
-                                                
+                                                <td></td>
                                             </tr>
                                         @endforeach
                                     </tbody>
+
                                 </table>
                             </div>
                         </div>

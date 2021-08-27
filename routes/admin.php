@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TeamController;
@@ -27,6 +28,11 @@ Route::post('about',[AboutController::class,'update'])->name('updateabout');
 //our team 
 Route::resource('team', TeamController::class);
 Route::post('team_status',[TeamController::class,'teamStatus'])->name('team.status');
+
+
+//blog 
+Route::resource('blog', BlogController::class);
+Route::post('blog_status',[BlogController::class,'blogStatus'])->name('blog.status');
 
 
 });

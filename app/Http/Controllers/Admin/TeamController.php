@@ -118,7 +118,6 @@ class TeamController extends Controller
                 'name_en'=>'string|required',
                 'job_en'=>'string|required',
                 'job_en'=>'string|required',
-                'image'=>'required',
                 'status'=>'nullable|in:active,inactive',
             ]);
             $data = $request->all();
