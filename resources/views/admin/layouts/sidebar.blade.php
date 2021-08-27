@@ -13,6 +13,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('course.index')}}" class="waves-effect">
+                                <i class="fas fa-university"></i><span style="font-family: cairo;">المسارات التدريببية</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('blog.index')}}" class="waves-effect">
                                 <i class="far fa-edit"></i><span style="font-family: cairo;">  المدونة و المقالات  </span>
                             </a>
