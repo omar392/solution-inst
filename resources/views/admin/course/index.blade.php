@@ -56,8 +56,15 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
+                                                <label for="example-text-input" class="col-sm-2 col-form-label">لينك الكورس</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" name="course_link"
+                                                        id="example-text-input" placeholder="Course Link" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="example-text-input"
-                                                    class="col-sm-2 col-form-label">محتوى المقال</label>
+                                                    class="col-sm-2 col-form-label">محتوى المسار التدريبى</label>
                                                 <div class="col-sm-10">
                                                     <textarea class="form-control" name="description_ar" id="editor5"></textarea>
                                                 <script>

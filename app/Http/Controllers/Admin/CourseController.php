@@ -44,6 +44,7 @@ class CourseController extends Controller
             'title_en'=>'string|required',
             'description_en'=>'string|required',
             'description_en'=>'string|required',
+            'course_link' =>'nullable',
             'image'=>'required',
             'status'=>'nullable|in:active,inactive',
         ]);
@@ -118,6 +119,7 @@ class CourseController extends Controller
                 'title_en'=>'string|required',
                 'description_en'=>'string|required',
                 'description_en'=>'string|required',
+                'course_link' =>'nullable',
                 // 'image'=>'required',
                 'status'=>'nullable|in:active,inactive',
             ]);

@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('image');
             $table->string('title_ar');
             $table->string('title_en');
+            $table->string('course_link')->nullable();
             $table->longText('description_ar');
             $table->longText('description_en');
             $table->enum('status',['active','inactive'])->default('inactive');

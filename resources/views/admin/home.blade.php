@@ -27,75 +27,63 @@
                     <div class="row">
 
                         <div class="col-sm-6 col-xl-4">
+                            <a href="{{route('course.index')}}">
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-cube-outline bg-primary  text-white"></i>
+                                        <i class="mdi mdi-school bg-primary  text-white"></i>
                                     </div>
                                     <div>
-                                        <h5 class="font-16">Active Sessions</h5>
+                                        <h5 class="font-16" style="font-family: cairo;">المسارات التدريبية</h5>
                                     </div>
-                                    <h3 class="mt-4">43,225</h3>
+                                    <h3 class="mt-4">{{\App\Models\Course::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{\App\Models\Course::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">75%</span></p>
+                                    <p class="text-muted mt-2 mb-0">العدد الموجود<span class="float-right">{{\App\Models\Course::count()}}</span></p>
                                 </div>
                             </div>
+                            </a>
                         </div>
 
                         <div class="col-sm-6 col-xl-4">
+                            <a href="{{route('team.index')}}">
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-briefcase-check bg-success text-white"></i>
+                                        <i class="mdi mdi-account-group bg-success text-white"></i>
                                     </div>
                                     <div>
-                                        <h5 class="font-16">Total Revenue</h5>
+                                        <h5 class="font-16" style="font-family: cairo;" >فريق العمل</h5>
                                     </div>
-                                    <h3 class="mt-4">$73,265</h3>
+                                    <h3 class="mt-4">{{\App\Models\Team::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: {{\App\Models\Team::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">88%</span></p>
+                                    <p class="text-muted mt-2 mb-0">العدد الموجود<span class="float-right">{{\App\Models\Team::count()}}</span></p>
                                 </div>
                             </div>
+                            </a>
                         </div>
 
                         <div class="col-sm-6 col-xl-4">
+                            <a href="{{route('blog.index')}}">
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
+                                        <i class="mdi mdi-pencil-outline bg-warning text-white"></i>
                                     </div>
                                     <div>
-                                        <h5 class="font-16">Average Price</h5>
+                                        <h5 class="font-16" style="font-family: cairo;" >المدونة و المقالات</h5>
                                     </div>
-                                    <h3 class="mt-4">447</h3>
+                                    <h3 class="mt-4">{{\App\Models\Bolg::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: {{\App\Models\Bolg::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">68%</span></p>
+                                    <p class="text-muted mt-2 mb-0">عدد المقالات<span class="float-right">{{\App\Models\Bolg::count()}}</span></p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-sm-6 col-xl-4">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-buffer bg-danger text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-16">Add to Card</h5>
-                                    </div>
-                                    <h3 class="mt-4">86%</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">82%</span></p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                     </div>

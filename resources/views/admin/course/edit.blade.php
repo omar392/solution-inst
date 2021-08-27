@@ -41,6 +41,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">لينك الكورس</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" name="course_link"
+                                            id="example-text-input" placeholder="Course Link" value="{{$course->course_link}}" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="example-text-input"
                                         class="col-sm-2 col-form-label">محتوى المسار</label>
                                     <div class="col-sm-10">
