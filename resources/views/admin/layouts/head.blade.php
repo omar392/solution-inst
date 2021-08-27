@@ -8,7 +8,14 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="../plugins/morris/morris.css">
+    <link rel="stylesheet" href="{{asset('dashboard/assets/css/morris.css')}}">
+
+    <!-- DataTables -->
+    <link href="{{asset('dashboard/assets/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/assets/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{asset('dashboard/assets/vendor/switch-button-bootstrap/css/bootstrap-switch-button.css')}}">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" rel="stylesheet">
 
     <link href="{{asset('dashboard/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('dashboard/assets/css/metismenu.min.css')}}" rel="stylesheet" type="text/css">
@@ -16,10 +23,35 @@
     <link href="{{asset('dashboard/assets/css/style.css')}}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
     <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+    
 </head>
 <style>
       body {
         font-family: 'Cairo';
         /* font-size: 22px; */
     }
+    body {
+	font-size: 1rem;
+	/* display: flex; */
+	min-height: 100vh;
+	margin: 0 auto;
+	/* justify-content: center; */
+	/* align-items: center; */
+	flex-direction: column;
+	color: rgb(20, 20, 28);
+}
+.input-preview {
+	border-radius: 4px;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	transition: ease-in-out 750ms;
+}
 </style>
