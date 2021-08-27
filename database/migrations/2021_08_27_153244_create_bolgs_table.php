@@ -20,6 +20,7 @@ class CreateBolgsTable extends Migration
             $table->string('title_en');
             $table->longText('description_ar');
             $table->longText('description_en');
+            $table->enum('status',['active','inactive'])->default('inactive');
             $table->timestamps();
         });
     }

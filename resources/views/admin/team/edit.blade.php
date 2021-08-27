@@ -73,7 +73,7 @@
                                 <div class="form-group text-center m-t-20">
                                     <div class="col-12">
                                         <button class="btn btn-primary btn-block btn-lg" name="submit"
-                                            type="submit">إضافة</button>
+                                            type="submit">تعديل</button>
                                     </div>
                                 </div>
                             </form>
