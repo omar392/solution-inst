@@ -76,7 +76,7 @@
                                     <div>
                                         <h5 class="font-16" style="font-family: cairo;" >المدونة و المقالات</h5>
                                     </div>
-                                    <h3 class="mt-4">{{\App\Models\Bolg::count()}}</h3>
+                                    <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
                                         <div class="progress-bar bg-success" role="progressbar" style="width: {{\App\Models\Bolg::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
@@ -85,6 +85,7 @@
                             </div>
                             </a>
                         </div>
+
 
                     </div>
 

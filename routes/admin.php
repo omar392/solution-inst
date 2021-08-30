@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TeamController;
@@ -38,6 +39,11 @@ Route::post('blog_status',[BlogController::class,'blogStatus'])->name('blog.stat
 //course 
 Route::resource('course', CourseController::class);
 Route::post('course_status',[CourseController::class,'courseStatus'])->name('course.status');
+
+
+//faq
+Route::resource('faq', FaqController::class);
+Route::post('faq_status',[FaqController::class,'faqStatus'])->name('faq.status');
 
 
 });
