@@ -23,6 +23,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('faq.index')}}" class="waves-effect">
+                                <i class="fas fa-question"></i><span style="font-family: cairo;">  أسئلة و أجوبة  </span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('team.index')}}" class="waves-effect">
                                 <i class="fas fa-user-friends"></i><span style="font-family: cairo;"> فريق العمل  </span>
                             </a>
