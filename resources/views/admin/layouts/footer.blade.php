@@ -53,6 +53,6 @@
     <script>
         setTimeout(function(){
             $('#alert').slideUp();
-        },4000);
+        },3000);
     </script>
     @yield('scripts')

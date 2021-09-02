@@ -108,6 +108,27 @@
                             </a>
                         </div>
 
+                        <div class="col-sm-6 col-xl-4">
+                            <a href="{{route('customer.index')}}">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-web bg-primary text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16" style="font-family: cairo;" >العملاء و الشركاء</h5>
+                                    </div>
+                                    {{-- <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3> --}}
+                                    <h3 class="mt-4">{{\App\Models\Customer::count()}}</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{\App\Models\Customer::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="text-muted mt-2 mb-0">عدد العملاء<span class="float-right">{{\App\Models\Customer::count()}}</span></p>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
 
                     </div>
 

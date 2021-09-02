@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\SettingController;
@@ -44,6 +45,11 @@ Route::post('course_status',[CourseController::class,'courseStatus'])->name('cou
 //faq
 Route::resource('faq', FaqController::class);
 Route::post('faq_status',[FaqController::class,'faqStatus'])->name('faq.status');
+
+
+//customer
+Route::resource('customer', CustomerController::class);
+Route::post('customer_status',[CustomerController::class,'customerStatus'])->name('customer.status');
 
 
 });
