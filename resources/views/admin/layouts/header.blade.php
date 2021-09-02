@@ -3,12 +3,12 @@
 
             <!-- LOGO -->
             <div class="topbar-left">
-                <a href="index.html" class="logo">
+                <a href="{{route('adminhome')}}" class="logo">
                     <span class="logo-light">
-                            <i class="mdi mdi-camera-control"></i> Stexo
+                            معهد صناع الحلول 
                         </span>
                     <span class="logo-sm">
-                            <i class="mdi mdi-camera-control"></i>
+                            
                         </span>
                 </a>
             </div>
@@ -52,7 +52,7 @@
                     <li class="dropdown notification-list list-inline-item">
                         <div class="dropdown notification-list nav-pro-img">
                             <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{asset('dashboard/assets/images/users/user-4.jpg')}}" alt="user" class="rounded-circle">
+                                <img src="{{asset('frontend/assets/img/logo80.png')}}" alt="user" class="rounded-circle">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
