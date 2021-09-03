@@ -16,7 +16,7 @@
 <script src="{{asset('frontend/assets/js/form-validator.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/contact-form-script.js')}}"></script>
 <script src="{{asset('frontend/assets/js/main.js')}}"></script>
-<script dir="ltr">
+<script>
     var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?5505';
     var s = document.createElement('script');
     s.type = 'text/javascript';
@@ -29,7 +29,7 @@
       "ctaText":"",
       "borderRadius":"100",
       "marginLeft":"0",
-      "marginBottom":"10",
+      "marginBottom":"50",
       "marginRight":"20",
       "position":"right"
   },

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,16 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // })->name('website');
 
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){ 
+        
 Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'home'])->name('website');
+
+
+});
 
 Route::get('command', function () {
     \Artisan::call('route:clear');
@@ -33,4 +43,7 @@ Auth::routes([
 'login'=>false,
 ]);
 
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
