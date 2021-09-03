@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdvertController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CustomerController;
@@ -36,6 +37,12 @@ Route::post('team_status',[TeamController::class,'teamStatus'])->name('team.stat
 //blog 
 Route::resource('blog', BlogController::class);
 Route::post('blog_status',[BlogController::class,'blogStatus'])->name('blog.status');
+
+
+//advert 
+Route::resource('advert', AdvertController::class);
+Route::post('advert_status',[AdvertController::class,'advertStatus'])->name('advert.status');
+
 
 //course 
 Route::resource('course', CourseController::class);

@@ -23,6 +23,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('advert.index')}}" class="waves-effect">
+                                <i class="fas fa-bullhorn"></i><span style="font-family: cairo;">  الاعلانات  </span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('customer.index')}}" class="waves-effect">
                                 <i class="fas fa-handshake"></i><span style="font-family: cairo;">   العملاء و الشركاء  </span>
                             </a>

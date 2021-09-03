@@ -129,6 +129,28 @@
                             </a>
                         </div>
 
+                        <div class="col-sm-6 col-xl-4">
+                            <a href="{{route('advert.index')}}">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-microphone-variant bg-danger text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16" style="font-family: cairo;" >الاعلانات</h5>
+                                    </div>
+                                    {{-- <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3> --}}
+                                    <h3 class="mt-4">{{\App\Models\Advert::count()}}</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-error" role="progressbar" style="width: {{\App\Models\Advert::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="text-muted mt-2 mb-0">عدد الاعلانات<span class="float-right">{{\App\Models\Advert::count()}}</span></p>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        
 
                     </div>
 
