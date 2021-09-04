@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\OpinionController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
@@ -71,6 +72,11 @@ Route::post('customer_status',[CustomerController::class,'customerStatus'])->nam
 //slider
 Route::resource('slider', SliderController::class);
 Route::post('slider_status',[SliderController::class,'sliderStatus'])->name('slider.status');
+
+
+//opinion
+Route::resource('opinion', OpinionController::class);
+Route::post('opinion_status',[OpinionController::class,'opinionStatus'])->name('opinion.status');
 
 
 });

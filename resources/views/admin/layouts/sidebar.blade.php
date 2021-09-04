@@ -33,6 +33,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('opinion.index')}}" class="waves-effect">
+                                <i class="fas fa-crown"></i><span style="font-family: cairo;">أراء الجمهور</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('customer.index')}}" class="waves-effect">
                                 <i class="fas fa-handshake"></i><span style="font-family: cairo;">   العملاء و الشركاء  </span>
                             </a>
