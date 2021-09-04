@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,11 @@ Route::post('faq_status',[FaqController::class,'faqStatus'])->name('faq.status')
 //customer
 Route::resource('customer', CustomerController::class);
 Route::post('customer_status',[CustomerController::class,'customerStatus'])->name('customer.status');
+
+
+//slider
+Route::resource('slider', SliderController::class);
+Route::post('slider_status',[SliderController::class,'sliderStatus'])->name('slider.status');
 
 
 });

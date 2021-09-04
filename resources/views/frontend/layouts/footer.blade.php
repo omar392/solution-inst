@@ -82,9 +82,9 @@
     <div class="footer-bottom-area">
         <div class="container">
             <div class="logo">
-                <a href="index-4.html" class="d-inline-block"><img src="{{asset('frontend/assets/img/logo.png')}}" alt="image"></a>
+                <a href="{{route('website')}}" class="d-inline-block"><img src="{{asset('frontend/assets/img/logo164_45.png')}}" alt="image"></a>
             </div>
-            <p><i class='bx bx-copyright'></i>2021 <a href="index-4.html" target="_blank"></a> Programming By <a href="https://envytheme.com/" target="_blank">Green Way</a> | All rights reserved.</p>
+            <p><i class='bx bx-copyright'></i>2021 <a href="index-4.html" target="_blank"></a> Programming By <a href="https://envytheme.com/" target="_blank">Green Way</a> | All rights reserved</p>
         </div>
     </div>
 </footer>

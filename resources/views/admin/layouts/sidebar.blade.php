@@ -23,6 +23,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('slider.index')}}" class="waves-effect">
+                                <i class="far fa-images"></i><span style="font-family: cairo;">  الشرائح  </span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('advert.index')}}" class="waves-effect">
                                 <i class="fas fa-bullhorn"></i><span style="font-family: cairo;">  الاعلانات  </span>
                             </a>

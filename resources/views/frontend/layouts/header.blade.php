@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="raque-responsive-menu">
                     <div class="logo">
-                        <a href="index-4.html">
+                        <a href="{{route('website')}}">
                             <img src="{{asset('frontend/assets/img/logo164_45.png')}}" alt="logo">
                         </a>
                     </div>
@@ -41,87 +41,19 @@
         <div class="raque-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index-4.html">
+                    <a class="navbar-brand" href="{{route('website')}}">
                         <img src="{{asset('frontend/assets/img/logo164_45.png')}}" alt="logo">
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="{{route('website')}}" style="font-family: tahoma;" class="nav-link active">{{__('web.home')}}</a>
+                            <li class="nav-item"><a href="{{route('website')}}" class="nav-link active">{{__('web.home')}}</a>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Category <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-category-style-1.html" class="nav-link">Category Style 1</a></li>
-
-                                            <li class="nav-item"><a href="courses-category-style-2.html" class="nav-link">Category Style 2</a></li>
-
-                                            <li class="nav-item"><a href="courses-category-style-3.html" class="nav-link">Category Style 3</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="courses-list.html" class="nav-link">Courses List</a></li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 1 <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-2-columns-style-1.html" class="nav-link">2 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-3-columns-style-1.html" class="nav-link">3 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-4-columns-style-1.html" class="nav-link">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 2 <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-2-columns-style-2.html" class="nav-link">2 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-3-columns-style-2.html" class="nav-link">3 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-4-columns-style-2.html" class="nav-link">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 3 <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-2-columns-style-3.html" class="nav-link">2 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-3-columns-style-3.html" class="nav-link">3 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-4-columns-style-3.html" class="nav-link">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Details <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="single-courses.html" class="nav-link">Courses Details 1</a></li>
-
-                                            <li class="nav-item"><a href="single-courses-2.html" class="nav-link">Courses Details 2</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="nav-item"><a href="my-account.html" class="nav-link">My Account</a></li>
-                                </ul>
+                            <li class="nav-item"><a href="#" class="nav-link">Courses</a>
                             </li>
-                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <li>
-                                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                    {{ $properties['native'] }}
-                                </a>
-                            </li>
-                            @endforeach
-                            <li class="nav-item"><a href="#" class="nav-link">Blog <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="blog-style-1.html" class="nav-link">Blog Grid</a></li>
 
-                                    <li class="nav-item"><a href="blog-style-2.html" class="nav-link">Blog Right Sidebar</a></li>
-
-                                    <li class="nav-item"><a href="blog-style-3.html" class="nav-link">Blog Grid Full Width</a></li>
-
-                                    <li class="nav-item"><a href="single-blog.html" class="nav-link">Blog Details</a></li>
-                                </ul>
+                            <li class="nav-item"><a href="#" class="nav-link">Blog</a>
                             </li>
 
                             <li class="nav-item"><a href="#" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
@@ -140,45 +72,23 @@
 
                             <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                         </ul>
-
                         <div class="others-option">
                             <div class="dropdown language-switcher d-inline-block">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="{{asset('frontend/assets/img/us-flag.jpg')}}" class="shadow" alt="image">
-                                    <span>Eng <i class='bx bx-chevron-down'></i></span>
-                                </button>
-
-                                <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/germany-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Ger</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/france-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Fre</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/spain-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Spa</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/russia-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Rus</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/italy-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Ita</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <a href="cart.html" class="cart-wrapper-btn d-inline-block">
-                                <i class='bx bx-cart-alt'></i>
-                                <span>01</span>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        @if($localeCode == LaravelLocalization::getCurrentLocale())
+                        @elseif($url = LaravelLocalization::getLocalizedURL($localeCode))
+                            <a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                class="nav-link">
+                                @if (app()->getLocale() == 'ar')
+                                <img src="{{asset('frontend/assets/img/us-flag.jpg')}}"  style="width: 40px;height: 20px;">
+                                <span>English</span>
+                                @else
+                                <img src="{{ asset('frontend/assets/img/ksa.png') }}" style="width: 40px;height: 20px;">
+                                <span style="font-family: cairo;" >العربية</span>
+                                @endif
                             </a>
-
-                            <div class="search-box d-inline-block">
-                                <i class='bx bx-search'></i>
+                        @endif
+                        @endforeach
                             </div>
                         </div>
                     </div>
@@ -193,8 +103,8 @@
         <div class="raque-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index-4.html">
-                        <img src="{{asset('frontend/assets/img/black-logo.png')}}" alt="logo">
+                    <a class="navbar-brand" href="{{route('website')}}">
+                        <img src="{{asset('frontend/assets/img/logo164_45.png')}}" alt="logo">
                     </a>
 
                     <div class="collapse navbar-collapse">
@@ -366,42 +276,21 @@
 
                         <div class="others-option">
                             <div class="dropdown language-switcher d-inline-block">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="{{asset('frontend/assets/img/us-flag.jpg')}}" class="shadow" alt="image">
-                                    <span>Eng <i class='bx bx-chevron-down'></i></span>
-                                </button>
-
-                                <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/germany-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Ger</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/france-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Fre</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/spain-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Spa</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/russia-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Rus</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-                                        <img src="{{asset('frontend/assets/img/italy-flag.jpg')}}" class="shadow-sm" alt="flag">
-                                        <span>Ita</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <a href="cart.html" class="cart-wrapper-btn d-inline-block">
-                                <i class='bx bx-cart-alt'></i>
-                                <span>01</span>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        @if($localeCode == LaravelLocalization::getCurrentLocale())
+                        @elseif($url = LaravelLocalization::getLocalizedURL($localeCode))
+                            <a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                class="nav-link">
+                                @if (app()->getLocale() == 'ar')
+                                <img src="{{asset('frontend/assets/img/us-flag.jpg')}}"  style="width: 40px;height: 20px;">
+                                <span>English</span>
+                                @else
+                                <img src="{{ asset('frontend/assets/img/ksa.png') }}" style="width: 40px;height: 20px;">
+                                <span style="font-family: cairo;" >العربية</span>
+                                @endif
                             </a>
-
-                            <div class="search-box d-inline-block">
-                                <i class='bx bx-search'></i>
+                        @endif
+                        @endforeach
                             </div>
                         </div>
                     </div>

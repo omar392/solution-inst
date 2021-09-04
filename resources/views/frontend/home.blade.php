@@ -1,37 +1,36 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-        <!-- Start Main Banner -->
-        <div class="hero-banner">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="hero-banner-content">
-                                    <span class="sub-title">ENJOY SMOOTH LEARNING</span>
-                                    <h1>Convenient Easy Way of Learning New Skills!</h1>
-                                    <p>Learn from Raque online platform by following our proven ways to achieve the Best Skills for your present and future career.</p>
-                                    <div class="btn-box">
-                                        <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
-                                        <a href="contact.html" class="optional-btn">Get Started Free</a>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- Start Mission Area -->
+        <section class="mission-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
+            <div class="container">
+                <div class="mission-content">
+                    <div class="section-title text-left">
+                        <span class="sub-title">Discover Mission</span>
+                        <h2>Why our platform in better</h2>
+                    </div>
 
-                            <div class="col-lg-6 col-md-12">
-                                <div class="hero-banner-image text-center">
-                                    <img src="{{asset('frontend/assets/img/banner-img1.jpg')}}" alt="image">
-                                </div>
-                            </div>
+                    <div class="mission-slides owl-carousel owl-theme">
+                        <div>
+                            <h3>Quality can be better than quantity in this platform</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="about-style-1.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">Learn More</span><i class="bx bx-user-pin icon-arrow after"></i></a>
+                        </div>
+
+                        <div>
+                            <h3>A place where you can achieve</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="about-style-2.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">Learn More</span><i class="bx bx-user-pin icon-arrow after"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End Main Banner -->
+        </section>
+        <!-- End Mission Area -->
 
-        <!-- Start Boxes Area -->
+        {{-- <!-- Start Boxes Area -->
         <section class="boxes-area">
             <div class="container-fluid">
                 <div class="row">
@@ -69,7 +68,7 @@
                 </div>
             </div>
         </section>
-        <!-- End Boxes Area -->
+        <!-- End Boxes Area --> --}}
 
         <!-- Start Courses Area -->
         <section class="courses-area ptb-100">
@@ -380,34 +379,6 @@
         </section>
         <!-- End Courses Area -->
 
-        <!-- Start Mission Area -->
-        <section class="mission-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
-            <div class="container">
-                <div class="mission-content">
-                    <div class="section-title text-left">
-                        <span class="sub-title">Discover Mission</span>
-                        <h2>Why our platform in better</h2>
-                    </div>
-
-                    <div class="mission-slides owl-carousel owl-theme">
-                        <div>
-                            <h3>Quality can be better than quantity in this platform</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="about-style-1.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">Learn More</span><i class="bx bx-user-pin icon-arrow after"></i></a>
-                        </div>
-
-                        <div>
-                            <h3>A place where you can achieve</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="about-style-2.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">Learn More</span><i class="bx bx-user-pin icon-arrow after"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Mission Area -->
 
         <!-- Start Courses Categories Area -->
         <section class="courses-categories-area bg-image pt-100 pb-70">
@@ -473,7 +444,7 @@
         </section>
         <!-- End Courses Categories Area -->
 
-        <!-- Start Partner Area -->
+        {{-- <!-- Start Partner Area -->
         <section class="partner-area pt-100">
             <div class="container">
                 <div class="section-title">
@@ -519,9 +490,9 @@
                 </div>
             </div>
         </section>
-        <!-- End Partner Area -->
+        <!-- End Partner Area --> --}}
 
-        <!-- Start Team Area -->
+        {{-- <!-- Start Team Area -->
         <section class="team-area ptb-100">
             <div class="container">
                 <div class="section-title">
@@ -601,7 +572,7 @@
 
             <div id="particles-js-circle-bubble-3"></div>
         </section>
-        <!-- End Team Area -->
+        <!-- End Team Area --> --}}
 
         <!-- Start Offer Area -->
         <section class="offer-area pt-100 jarallax" data-jarallax='{"speed": 0.3}'>
@@ -647,7 +618,7 @@
         </section>
         <!-- End Offer Area -->
 
-        <!-- Start Blog Area -->
+        {{-- <!-- Start Blog Area -->
         <section class="blog-area pt-100 pb-70">
             <div class="container">
                 <div class="section-title text-left">
@@ -779,8 +750,8 @@
                 </div>
             </div>
         </section>
-        <!-- End Blog Area -->
-
+        <!-- End Blog Area --> --}}
+{{-- 
         <!-- Start Become Instructor & Partner Area -->
         <section class="become-instructor-partner-area">
             <div class="container-fluid">
@@ -815,6 +786,6 @@
                 </div>
             </div>
         </section>
-        <!-- End Become Instructor & Partner Area -->
+        <!-- End Become Instructor & Partner Area --> --}}
 
 @endsection
