@@ -53,6 +53,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('counter')}}" class="waves-effect">
+                                <i class="fas fa-sort-amount-down"></i><span style="font-family: cairo;">الاحصائيات</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('setting')}}" class="waves-effect">
                                 <i class="fas fa-cog"></i><span style="font-family: cairo;">إعدادات الموقع</span>
                             </a>

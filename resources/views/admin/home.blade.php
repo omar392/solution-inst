@@ -31,14 +31,14 @@
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-school bg-primary  text-white"></i>
+                                        <i class="mdi mdi-school bg-danger  text-white"></i>
                                     </div>
                                     <div>
                                         <h5 class="font-16" style="font-family: cairo;">المسارات التدريبية</h5>
                                     </div>
                                     <h3 class="mt-4">{{\App\Models\Course::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{\App\Models\Course::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{\App\Models\Course::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <p class="text-muted mt-2 mb-0">العدد الموجود<span class="float-right">{{\App\Models\Course::count()}}</span></p>
                                 </div>
@@ -51,14 +51,14 @@
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-account-group bg-success text-white"></i>
+                                        <i class="mdi mdi-account-group bg-danger text-white"></i>
                                     </div>
                                     <div>
                                         <h5 class="font-16" style="font-family: cairo;" >فريق العمل</h5>
                                     </div>
                                     <h3 class="mt-4">{{\App\Models\Team::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: {{\App\Models\Team::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{\App\Models\Team::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <p class="text-muted mt-2 mb-0">العدد الموجود<span class="float-right">{{\App\Models\Team::count()}}</span></p>
                                 </div>
@@ -71,7 +71,7 @@
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-pencil-outline bg-warning text-white"></i>
+                                        <i class="mdi mdi-pencil-outline bg-danger text-white"></i>
                                     </div>
                                     <div>
                                         <h5 class="font-16" style="font-family: cairo;" >المدونة و المقالات</h5>
@@ -79,7 +79,7 @@
                                     {{-- <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3> --}}
                                     <h3 class="mt-4">{{\App\Models\Bolg::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: {{\App\Models\Bolg::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{\App\Models\Bolg::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <p class="text-muted mt-2 mb-0">عدد المقالات<span class="float-right">{{\App\Models\Bolg::count()}}</span></p>
                                 </div>
@@ -113,7 +113,7 @@
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-web bg-primary text-white"></i>
+                                        <i class="mdi mdi-web bg-danger text-white"></i>
                                     </div>
                                     <div>
                                         <h5 class="font-16" style="font-family: cairo;" >العملاء و الشركاء</h5>
@@ -121,7 +121,7 @@
                                     {{-- <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3> --}}
                                     <h3 class="mt-4">{{\App\Models\Customer::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{\App\Models\Customer::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{\App\Models\Customer::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <p class="text-muted mt-2 mb-0">عدد العملاء<span class="float-right">{{\App\Models\Customer::count()}}</span></p>
                                 </div>
@@ -142,7 +142,7 @@
                                     {{-- <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3> --}}
                                     <h3 class="mt-4">{{\App\Models\Advert::count()}}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-error" role="progressbar" style="width: {{\App\Models\Advert::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{\App\Models\Advert::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <p class="text-muted mt-2 mb-0">عدد الاعلانات<span class="float-right">{{\App\Models\Advert::count()}}</span></p>
                                 </div>
@@ -150,7 +150,26 @@
                             </a>
                         </div>
 
-                        
+                        <div class="col-sm-6 col-xl-4">
+                            <a href="{{route('slider.index')}}">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-set-none bg-danger text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16" style="font-family: cairo;" >الشرائح</h5>
+                                    </div>
+                                    {{-- <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3> --}}
+                                    <h3 class="mt-4">{{\App\Models\Slider::count()}}</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{\App\Models\Slider::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="text-muted mt-2 mb-0">عدد الشرائح<span class="float-right">{{\App\Models\Slider::count()}}</span></p>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
 
                     </div>
 

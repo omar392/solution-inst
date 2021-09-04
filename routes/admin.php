@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdvertController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\FaqController;
@@ -26,9 +27,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function () 
 Route::get('setting',[SettingController::class,'index'])->name('setting');
 Route::post('setting',[SettingController::class,'update'])->name('updatesetting');
 
+
+//counter
+Route::get('counter',[CounterController::class,'index'])->name('counter');
+Route::post('counter',[CounterController::class,'update'])->name('updatecounter');
+
+
 //about_us
 Route::get('about',[AboutController::class,'index'])->name('about');
 Route::post('about',[AboutController::class,'update'])->name('updateabout');
+
 
 //our team 
 Route::resource('team', TeamController::class);
