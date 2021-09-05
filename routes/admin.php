@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\OpinionController;
 use App\Http\Controllers\Admin\SettingController;
@@ -77,6 +78,11 @@ Route::post('slider_status',[SliderController::class,'sliderStatus'])->name('sli
 //opinion
 Route::resource('opinion', OpinionController::class);
 Route::post('opinion_status',[OpinionController::class,'opinionStatus'])->name('opinion.status');
+
+
+//gallary
+Route::resource('gallary', GallaryController::class);
+Route::post('gallary_status',[GallaryController::class,'gallaryStatus'])->name('gallary.status');
 
 
 });

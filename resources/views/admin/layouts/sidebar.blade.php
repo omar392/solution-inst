@@ -48,6 +48,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('gallary.index')}}" class="waves-effect">
+                                <i class="far fa-images"></i><span style="font-family: cairo;">معرض الصور</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('team.index')}}" class="waves-effect">
                                 <i class="fas fa-user-friends"></i><span style="font-family: cairo;"> فريق العمل  </span>
                             </a>
