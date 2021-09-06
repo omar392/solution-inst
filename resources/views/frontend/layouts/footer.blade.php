@@ -3,29 +3,30 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget mb-30">
-                    <h3>Contact Us</h3>
+                    <h3 style="font-family: cairo;">{{__('web.contact')}}</h3>
 
                     <ul class="contact-us-link">
                         <li>
                             <i class='bx bx-map'></i>
-                            <a href="#" target="_blank">2750 Quadra Street Victoria Road, New York, USA</a>
+                            <a href="" target="_blank">{!! $setting->address !!}</a>
                         </li>
                         <li>
                             <i class='bx bx-phone-call'></i>
-                            <a href="#">+1 (123) 456 7890</a>
+                            <a>{{$setting->phone}}</a>
                         </li>
                         <li>
                             <i class='bx bx-envelope'></i>
-                            <a href="#">hello@raque.com</a>
+                            <a href="https://{{$setting->email}}">{{$setting->email}}</a>
                         </li>
                     </ul>
 
                     <ul class="social-link">
-                        <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                        <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                        <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                        <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-pinterest-alt'></i></a></li>
+                        <li><a href="{{$setting->facebook}}" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="{{$setting->twitter}}" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                        <li><a href="{{$setting->instagram}}" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                        <li><a href="{{$setting->linkedin}}" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                        <li><a href="{{$setting->snapchat}}" class="d-block" target="_blank"><i class='bx bxl-snapchat'></i></a></li>
+                        <li><a href="{{$setting->youtube}}" class="d-block" target="_blank"><i class='bx bxl-youtube'></i></a></li>
                     </ul>
                 </div>
             </div>

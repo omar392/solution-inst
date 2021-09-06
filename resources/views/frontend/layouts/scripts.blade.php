@@ -14,7 +14,7 @@
 <script src="{{asset('frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/jquery.ajaxchimp.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/form-validator.min.js')}}"></script>
-<script src="{{asset('frontend/assets/js/contact-form-script.js')}}"></script>
+{{-- <script src="{{asset('frontend/assets/js/contact-form-script.js')}}"></script> --}}
 <script src="{{asset('frontend/assets/js/main.js')}}"></script>
 <script>
     var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?5505';
@@ -28,15 +28,18 @@
       "backgroundColor":"#4dc247",
       "ctaText":"",
       "borderRadius":"100",
-      "marginLeft":"0",
+      "marginLeft":"20",
       "marginBottom":"50",
       "marginRight":"20",
-      "position":"right"
+      "position":"left",
+      @if (app()->getLocale() == 'ar')
+      "position":"rigth"
+      @endif
   },
   "brandSetting":{
       "brandName":"معهد صناع الحلول",
       "brandSubTitle":"يصلك الرد خلال اليوم",
-      "brandImg":"https://scontent.fcai21-1.fna.fbcdn.net/v/t1.6435-9/184784401_2930576567262289_2335544341578323342_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=BVLPwnGQhRQAX_6Rp0F&_nc_oc=AQmb4Y2d0dIWx202uMtRNGw4CPJTp5KD6i9R2Se71HNNxN-uRDfQxXc8hnVHQSiuBM8&_nc_ht=scontent.fcai21-1.fna&oh=dde01fe250ea24b9d5c472f3dfe28706&oe=60CC15CF",
+      "brandImg":"{{asset('frontend/assets/img/logo80.png')}}",
       "welcomeText":"أهلا بك \n كيف يمكننى مساعدتك؟",
       "messageText":"كنت أود الاستفسار عن ",
       "backgroundColor":"#0a5f54",

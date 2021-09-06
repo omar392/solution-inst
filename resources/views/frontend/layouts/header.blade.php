@@ -6,17 +6,19 @@
                 <div class="col-lg-8 col-md-8">
                     <ul class="top-header-contact-info">
                         <li>
-                            Call: 
-                            <a href="tel:502464674">+502 464 674</a>
+                            {{__('web.call')}}: 
+                            <a href="tel:502464674">{{$setting->phone}}</a>
                         </li>
                     </ul>
 
                     <div class="top-header-social">
-                        <span>Follow us:</span>
-                        <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
-                        <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
-                        <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        <span>{{__('web.follow')}}:</span>
+                        <a href="{{$setting->facebook}}" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="{{$setting->twitter}}" target="_blank"><i class='bx bxl-twitter'></i></a>
+                        <a href="{{$setting->linkedin}}" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="{{$setting->instagram}}" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        <a href="{{$setting->snapchat}}" target="_blank"><i class='bx bxl-snapchat'></i></a>
+                        <a href="{{$setting->youtube}}" target="_blank"><i class='bx bxl-youtube'></i></a>
                     </div>
                 </div>
 
@@ -109,30 +111,7 @@
 
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="#" class="nav-link active">Home <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="index.html" class="nav-link">Distant Learning</a></li>
-
-                                    <li class="nav-item"><a href="index-2.html" class="nav-link">Course Portal Online</a></li>
-
-                                    <li class="nav-item"><a href="index-3.html" class="nav-link">Modern Teaching</a></li>
-
-                                    <li class="nav-item"><a href="index-4.html" class="nav-link active">Online Education Portal</a></li>
-
-                                    <li class="nav-item"><a href="index-5.html" class="nav-link">Online Schooling</a></li>
-
-                                    <li class="nav-item"><a href="index-6.html" class="nav-link">Learning School Online</a></li>
-
-                                    <li class="nav-item"><a href="index-7.html" class="nav-link">Remote Training Online</a></li>
-
-                                    <li class="nav-item"><a href="index-8.html" class="nav-link">Business Coaching</a></li>
-
-                                    <li class="nav-item"><a href="index-9.html" class="nav-link">Health Coaching</a></li>
-
-                                    <li class="nav-item"><a href="index-10.html" class="nav-link">Language School</a></li>
-
-                                    <li class="nav-item"><a href="index-11.html" class="nav-link">Gym Coaching</a></li>
-                                </ul>
+                            <li class="nav-item"><a href="{{route('website')}}" class="nav-link">{{__('web.home')}}</a>
                             </li>
 
                             <li class="nav-item"><a href="#" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>

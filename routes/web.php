@@ -28,6 +28,10 @@ Route::group(
 Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'home'])->name('website');
 
 
+//contactus
+Route::get('/contact-us',[App\Http\Controllers\Frontend\ContactController::class,'index'])->name('contactus');
+
+
 });
 
 Route::get('command', function () {
