@@ -70,7 +70,7 @@
                 <div class="section-title text-left">
                     <span class="sub-title">{{__('web.course')}}</span>
                     <h2 style="font-family: cairo;">{{__('web.coursepopular')}}</h2>
-                    <a href="#" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">{{__('web.allcourse')}}</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+                    <a href="{{route('fronts.courses')}}" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">{{__('web.allcourse')}}</span><i class="bx bx-show-alt icon-arrow after"></i></a>
                 </div>
 
                 <div class="courses-slides owl-carousel owl-theme">
@@ -78,13 +78,13 @@
                     @foreach ($course as $item)
                     <div class="single-courses-box without-box-shadow mb-30">
                         <div class="courses-image">
-                            <a href="#" class="d-block"><img src="{{asset('upload/course/' . $item->image)}}" alt="image"></a>
+                            <a href="{{route('fronts.courses')}}" class="d-block"><img src="{{asset('upload/course/' . $item->image)}}" alt="image"></a>
                         </div>
                         <div class="courses-content">
                             <div class="course-author d-flex align-items-center">
                                 {{-- <span>Steven Smith</span> --}}
                             </div>
-                            <h3 style="font-family: cairo;"><a href="#" class="d-inline-block">{{$item->title}}</a></h3>
+                            <h3 style="font-family: cairo;"><a href="{{route('fronts.courses')}}" class="d-inline-block">{{$item->title}}</a></h3>
                         </div>
                     </div>
                     @endforeach
@@ -502,5 +502,23 @@
             </div>
         </section>
         <!-- End Become Instructor & Partner Area --> --}}
+                <!-- Start Partner Area -->
+                <section class="partner-area bg-color ptb-100">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Our Company & Partners</h2>
+                        </div>
+                        <div class="partner-slides owl-carousel owl-theme">
+                            @foreach ($customer as $item)
+                            <div class="single-partner-item">
+                                <a href="#" class="d-block">
+                                    <img src="{{ asset('upload/customer/' . $item->image) }}" alt="image">
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </section>
+                <!-- End Partner Area -->
 
 @endsection

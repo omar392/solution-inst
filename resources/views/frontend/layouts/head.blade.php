@@ -35,5 +35,16 @@
         font-family: 'Cairo';
         /* font-size: 18px; */
     }
+    [aria-current] .page-link {
+        background-color: red !important;
+    }
+
+    [rel='prev'], [rel='next'] {
+        background-color: red !important;
+    }
+
+    .pagination > li :not([rel='prev'],[rel='next'],[aria-current] .page-link) {
+        background-color: red !important;
+    }
 </style>
 @endif

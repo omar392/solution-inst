@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Frontend\CourceController;
+use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -24,12 +26,20 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
-        
-Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'home'])->name('website');
 
+//home page
+Route::get('/',[HomeController::class,'home'])->name('website');
+
+//courses page
+Route::get('/courses',[CourceController::class,'courses'])->name('fronts.courses');
+Route::get('courses-detail/{id}/',[CourceController::class,'coursesDetail'])->name('courses.detail');
 
 //contactus
 Route::get('/contact-us',[App\Http\Controllers\Frontend\ContactController::class,'index'])->name('contactus');
+
+
+
+
 
 
 });

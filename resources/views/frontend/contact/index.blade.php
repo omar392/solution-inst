@@ -79,7 +79,8 @@
                     @endif
                 
                 <div class="contact-form">
-                    <form id="contactForm" action="{{route('contact.submit')}}" method="POST">
+                    {{-- {{route('contact.submit')}} --}}
+                    <form id="contactForm" action="" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
