@@ -14,7 +14,7 @@
                         @foreach ($slider as $item)
                         <div>
                             <h3 style="font-family: cairo;">{{$item->title}}</h3>
-                            <p style="font-family: cairo;">{!! $item->description !!}</p>
+                            <p><strong style="font-family: cairo;">{!! $item->description !!}</strong></p>
                             <a href="about-style-1.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">{{__('web.learn')}}</span><i class="bx bx-user-pin icon-arrow after"></i></a>
                         </div>
                         @endforeach

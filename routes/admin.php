@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\EmploymentController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\LoginController;
@@ -84,6 +85,11 @@ Route::post('opinion_status',[OpinionController::class,'opinionStatus'])->name('
 Route::resource('gallary', GallaryController::class);
 Route::post('gallary_status',[GallaryController::class,'gallaryStatus'])->name('gallary.status');
 
+
+//employment
+Route::resource('employment', EmploymentController::class);
+Route::post('employment_status',[EmploymentController::class,'employmentStatus'])->name('employment.status');
+Route::post('/download{file}',[EmploymentController::class,'download'])->name('file');
 
 });
 
