@@ -50,14 +50,14 @@ class EmploymentController extends Controller
             'status'=>'nullable|in:active,inactive',
         ]);
         $data = $request->all();
-        // if($request->file('file')){
-        //     $file = $request->file('file');
-        //     $filename =date('YmdHi').$file->getClientOriginalName();
-        //     $file->move(public_path('upload/employment'),$filename);
-        //     $data['file']=$filename;
-            $fileName = time().'.'.$request->file->extension();  
-            $request->file->move(public_path('upload/employment'),$fileName);
-        // }
+        if($request->file('file')){
+            $file = $request->file('file');
+            $filename =date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('upload/employment'),$filename);
+            $data['file']=$filename;
+            // $fileName = time().'.'.$request->file->extension();  
+            // $request->file->move(public_path('upload/employment'),$fileName);
+        }
         if ($request->file('image')){
             $file = $request->file('image');
             $filename =date('YmdHi').$file->getClientOriginalName();
@@ -74,6 +74,7 @@ class EmploymentController extends Controller
     public function download(Request $request,$file){
 
         return response()->download(public_path('upload/employment/' . $file));
+
     }
 
     
@@ -98,7 +99,12 @@ class EmploymentController extends Controller
      */
     public function show($id)
     {
-        //
+        $employment = Employment::find($id);
+        if($employment){
+            return view('backend.employment.view',compact(['employment']));
+        }else{
+            return back()->with('error','هذه البيانات غير موجودة');
+        }
     }
 
     /**
@@ -139,6 +145,14 @@ class EmploymentController extends Controller
                 'status'=>'nullable|in:active,inactive',
             ]);
             $data = $request->all();
+        
+            if ($request->file('file')){
+                $file = $request->file('file');
+                @unlink(public_path('upload/employment/'.$data->file));
+                $filename =date('YmdHi').$file->getClientOriginalName();
+                $file->move(public_path('upload/employment'),$filename);
+                $data['file']=$filename;
+            }
             if ($request->file('image')){
                 $file = $request->file('image');
                 @unlink(public_path('upload/employment/'.$data->image));

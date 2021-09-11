@@ -33,6 +33,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('employment.index')}}" class="waves-effect">
+                                <i class="fas fa-briefcase"></i><span style="font-family: cairo;">التوظيف</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('opinion.index')}}" class="waves-effect">
                                 <i class="fas fa-crown"></i><span style="font-family: cairo;">أراء الجمهور</span>
                             </a>

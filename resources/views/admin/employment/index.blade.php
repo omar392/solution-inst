@@ -129,7 +129,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>الاسم</th>
-                                            <th>البريد الالكترونى</th>
+                                            {{-- <th>البريد الالكترونى</th> --}}
                                             <th>الصورة</th>
                                             <th>Dwonload CV</th>
                                             <th>الحالة</th>
@@ -142,13 +142,13 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->name }}</td>
-                                                <td>{{ $item->email }}</td>
+                                                {{-- <td>{{ $item->email }}</td> --}}
                                                 <td><img src="{{ !empty($item->image) ? url('upload/employment/' . $item->image) : url('upload/no_image.jfif') }}"
                                                         width="100px" height="110px" alt="image"
                                                         style="border-radius: 70px;">
                                                 </td>
                                                 <td>
-                                                <a href="{{url('download/'. $item->file)}}">ll
+                                                <a href="{{url('download/'. $item->file)}}">Download CV
                                                     <a href="{{asset('upload/employment/' . $item->file)}}" download>Download File</a>
                                                 </a>
                                                 </td>
@@ -163,6 +163,7 @@
                                                             class="float-left btn btn-info" data-size="sm" title="Edit"><i
                                                                 class="fa fa-edit"></i></button></a>
                                                     &ensp;
+                                                    <a><button type="button" title="view" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal{{$item->id}}"><i class="fa fa-eye"></i></button></a>
                                                     <form class="float-left ml-1"
                                                         action="{{ route('employment.destroy', $item->id) }}" method="POST">
                                                         @csrf
@@ -174,6 +175,36 @@
                                                                     class="fa fa-trash"></i></button></a>
                                                     </form>
                                                 </td>
+                                                <!-- sample modal content -->
+                                                <div id="myModal{{$item->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        @php
+                                                        $employment =\App\Models\Employment::where('id',$item->id)->first();
+                                                        @endphp
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title mt-0" id="myModalLabel">{{\Illuminate\Support\Str::upper($employment->name)}}</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <h5 class="font-16" style="font-family: cairo;">الاسم : {{$employment->name}} </h5>
+                                                                <h5 class="font-16" style="font-family: cairo;">البريد الالكترونى : {{$employment->email}} </h5>
+                                                                <h5 class="font-16" style="font-family: cairo;">العنوان : {{$employment->address}} </h5>
+                                                                <h5 class="font-16" style="font-family: cairo;">الهاتف : {{$employment->phone}} </h5>
+                                                                <h5 class="font-16" style="font-family: cairo;">التخصص : {{$employment->special}} </h5>
+                                                                <h5 class="font-16" style="font-family: cairo;">التخصص : {{$employment->special}} </h5>
+                                                                <h5 class="font-16" style="font-family: cairo;">الصورة : </h5>
+                                                                <img src="{{ asset('upload/employment/' . $employment->image) }}" alt="image" style="width: 250px;height: 250px;border-radius: 30px;">
+                                                                
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">إغلاق</button>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
                                                 
                                             </tr>
                                         @endforeach

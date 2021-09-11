@@ -8,12 +8,12 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <h4 class="page-title" style="font-family: cairo;">المدونة و المقالات</h4>
+                    <h4 class="page-title" style="font-family: cairo;">التوظيف</h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="{{route('adminhome')}}">الرئيسية</a></li>
-                        <li class="breadcrumb-item active">المدونة و المقالات</li>
+                        <li class="breadcrumb-item active">التوظيف</li>
                     </ol>
                 </div>
             </div> <!-- end row -->
@@ -21,42 +21,51 @@
                 <div class="col-12">
                     <div class="card m-b-30">
                         <div class="card-body">
-                            <form action="{{route('blog.update',$blog->id)}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{route('employment.update',$employment->id)}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('patch')
 
                                 <div class="form-group row">
                                     <label for="example-text-input"
-                                        class="col-sm-2 col-form-label">العنوان</label>
+                                        class="col-sm-2 col-form-label">الاسم</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="text" name="title_ar"
-                                            id="example-text-input" placeholder="عنوان المقال" value="{{$blog->title_ar}}" required>
+                                        <input class="form-control" type="text" name="name"
+                                            id="example-text-input" placeholder="الاسم" value="{{$employment->name}}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">الهاتف</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="title_en"
-                                            id="example-text-input" placeholder="Article Title" value="{{$blog->title_en}}" required>
+                                        <input class="form-control" name="phone" type="text"
+                                            id="example-text-input" placeholder="الهاتف" value="{{$employment->phone}}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="example-text-input"
-                                        class="col-sm-2 col-form-label">المقال</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">البريد الالكترونى</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" name="description_ar" id="editor5">{!! $blog->description_ar !!}</textarea>
-                                    <script>
-                                            CKEDITOR.replace( 'editor5' );
-                                    </script>
+                                        <input class="form-control" name="email" type="email"
+                                            id="example-text-input" placeholder="البريد الالكترونى" value="{{$employment->email}}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Article</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">العنوان</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" name="description_en" id="editor">{!! $blog->description_en !!}</textarea>
-                                        <script>
-                                                CKEDITOR.replace( 'editor' );
-                                        </script>
+                                        <input class="form-control" name="address" type="text"
+                                            id="example-text-input" placeholder="العنوان" value="{{$employment->address}}" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">التخصص</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" name="special" type="text"
+                                            id="example-text-input" placeholder="التخصص" value="{{$employment->special}}" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">الملف</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" name="file" type="file"
+                                            id="example-text-input"  value="{{$employment->file}}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -65,7 +74,7 @@
                                         <input class="input-preview__src" id="img" name="image" type="file" />
                                     </div>
                                 </div>
-
+                                
                                 <div class="form-group text-center m-t-20">
                                     <div class="col-12">
                                         <button class="btn btn-primary btn-block btn-lg" name="submit"
