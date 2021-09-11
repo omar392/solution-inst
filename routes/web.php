@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\CourceController;
+use App\Http\Controllers\Frontend\EmploymentController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,10 @@ Route::get('/',[HomeController::class,'home'])->name('website');
 //courses page
 Route::get('/courses',[CourceController::class,'courses'])->name('fronts.courses');
 Route::get('courses-detail/{id}/',[CourceController::class,'coursesDetail'])->name('courses.detail');
+
+//employment page
+Route::get('/employment',[EmploymentController::class,'employment'])->name('fronts.employment');
+Route::get('employment-detail/{id}/',[EmploymentController::class,'employmentDetail'])->name('employment.detail');
 
 //contactus
 Route::get('/contact-us',[App\Http\Controllers\Frontend\ContactController::class,'index'])->name('contactus');
