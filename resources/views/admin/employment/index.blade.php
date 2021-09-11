@@ -149,7 +149,7 @@
                                                 </td>
                                                 <td>
                                                 {{-- <a href="{{url('download/'. $item->file)}}">Download CV --}}
-                                                    <a href="{{asset('upload/employment/' . $item->file)}}" download>تحميل ملف (CV)</a>
+                                                    <a href="{{asset('upload/employment/' . $item->file)}}" download>تحميل ملف CV</a>
                                                 {{-- </a> --}}
                                                 </td>
                                                 <td>
@@ -274,4 +274,5 @@
             })
         });
     </script>
+
 @endsection
