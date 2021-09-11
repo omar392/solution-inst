@@ -199,8 +199,7 @@
                                                                 <h5 class="font-16" style="font-family: cairo;">التخصص : {{$employment->special}} </h5>
                                                                 <h5 class="font-16" style="font-family: cairo;">الصورة : </h5>
                                                                 <img src="{{ asset('upload/employment/' . $employment->image) }}" alt="image" style="width: 250px;height: 250px;border-radius: 30px;">
-                                                                <h5 class="font-16" style="font-family: cairo;">الملف الشخصى CV : </h5>
-                                                                <a href="{{asset('upload/employment/' . $employment->file)}}" download>تحميل ملف CV</a>
+                                                                <h5 class="font-16" style="font-family: cairo;">الملف الشخصى CV : <a href="{{asset('upload/employment/' . $employment->file)}}" download>تحميل ملف CV</a> </h5>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">إغلاق</button>
