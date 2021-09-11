@@ -149,7 +149,11 @@
                                                 </td>
                                                 <td>
                                                 {{-- <a href="{{url('download/'. $item->file)}}">Download CV --}}
+<<<<<<< HEAD
                                                     <a href="{{asset('upload/employment/' . $item->file)}}" download>Download File</a>
+=======
+                                                    <a href="{{asset('upload/employment/' . $item->file)}}" download>تحميل ملف (CV)</a>
+>>>>>>> a4a87a9a22bed902bf376ffa3c52aec3c139ff87
                                                 {{-- </a> --}}
                                                 </td>
                                                 <td>

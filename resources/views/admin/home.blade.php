@@ -88,7 +88,7 @@
                         </div>
 
                         <div class="col-sm-6 col-xl-4">
-                            <a href="{{route('faq.index')}}">
+                            <a href="{{route('employment.index')}}">
                             <div class="card">
                                 <div class="card-heading p-4">
                                     <div class="mini-stat-icon float-right">
