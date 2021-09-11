@@ -148,9 +148,9 @@
                                                         style="border-radius: 70px;">
                                                 </td>
                                                 <td>
-                                                <a href="{{url('download/'. $item->file)}}">Download CV
+                                                {{-- <a href="{{url('download/'. $item->file)}}">Download CV --}}
                                                     <a href="{{asset('upload/employment/' . $item->file)}}" download>Download File</a>
-                                                </a>
+                                                {{-- </a> --}}
                                                 </td>
                                                 <td>
                                                     <input type="checkbox" name="toogle" value="{{ $item->id }}"
