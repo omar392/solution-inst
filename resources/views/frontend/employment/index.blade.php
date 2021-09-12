@@ -29,14 +29,9 @@
                                 <div class="topbar-ordering-and-search">
                                     <div class="row align-items-center">
                                         <div class="col-lg-3 col-md-5 offset-lg-4 offset-md-1 col-sm-6">
-                                            <div class="topbar-ordering">
-                                                <select>
-                                                    <option>Sort by popularity</option>
-                                                    <option>Sort by latest</option>
-                                                    <option>Default sorting</option>
-                                                    <option>Sort by rating</option>
-                                                    <option>Sort by new</option>
-                                                </select>
+                                            <div class="product-add-to-cart">
+                                                <button type="submit" class="default-btn"><i class='bx bxs-download icon-arrow before'></i><span class="label">Upload</span>
+                                                <i class="bx bxs-downloadicon-arrow after"></i></button>
                                             </div>
                                         </div>
                                     </div>

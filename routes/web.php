@@ -39,6 +39,10 @@ Route::get('courses-detail/{id}/',[CourceController::class,'coursesDetail'])->na
 Route::get('/employment',[EmploymentController::class,'employment'])->name('fronts.employment');
 Route::get('employment-detail/{id}/',[EmploymentController::class,'employmentDetail'])->name('employment.detail');
 
+//employment subscribe
+Route::get('/employment-subscribe',[EmploymentController::class,'employmentSubscribe'])->name('fronts.employment.subscribe');
+Route::post('save-subscribe',[EmploymentController::class,'saveSubscribe'])->name('save.subscribe');
+
 //contactus
 Route::get('/contact-us',[App\Http\Controllers\Frontend\ContactController::class,'index'])->name('contactus');
 

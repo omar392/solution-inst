@@ -46,5 +46,47 @@
     .pagination > li :not([rel='prev'],[rel='next'],[aria-current] .page-link) {
         background-color: red !important;
     }
+
+    #custom-button {
+  padding: 10px;
+  color: white;
+  background-color: #ff1949;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#custom-button:hover {
+  background-color: #ff1949;
+}
+
+#custom-text {
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: #aaa;
+}
+body {
+	font-size: 1rem;
+	/* display: flex; */
+	min-height: 100vh;
+	margin: 0 auto;
+	/* justify-content: center; */
+	/* align-items: center; */
+	flex-direction: column;
+	color: rgb(20, 20, 28);
+}
+.input-preview {
+	border-radius: 4px;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	transition: ease-in-out 750ms;
+}
 </style>
 @endif

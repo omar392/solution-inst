@@ -17,6 +17,38 @@
 {{-- <script src="{{asset('frontend/assets/js/contact-form-script.js')}}"></script> --}}
 <script src="{{asset('frontend/assets/js/main.js')}}"></script>
 <script>
+    const realFileBtn = document.getElementById("real-file");
+const customBtn = document.getElementById("custom-button");
+const customTxt = document.getElementById("custom-text");
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+    customTxt.innerHTML = realFileBtn.value.match(
+      /[\/\\]([\w\d\s\.\-\(\)]+)$/
+    )[1];
+  } else {
+    customTxt.innerHTML = "No file chosen, yet.";
+  }
+});
+
+</script>
+<script>
+               const fileImage = document.querySelector(".input-preview__src");
+                const filePreview = document.querySelector(".input-preview");
+                fileImage.onchange = function () {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        filePreview.style.backgroundImage = "url(" + e.target.result + ")";
+                        filePreview.classList.add("has-image");
+                    };
+                    reader.readAsDataURL(this.files[0]);
+                };
+</script>
+<script>
     var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?5505';
     var s = document.createElement('script');
     s.type = 'text/javascript';
