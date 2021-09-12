@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-
+use App\Mail\Contact;
 use App\Http\Controllers\Controller;
 use App\Mail\Contact as MailContact;
-use App\Models\Contact;
+// use App\Models\Contact;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -30,11 +30,12 @@ class ContactController extends Controller
         ]);
         
         $data = $request->all();
-        $status = Mail::to('admin@gmail.com')->send(new MailContact($data));
+        // return $data;
+        $status = Mail::to('omarabosamaha@gmail.com')->send(new Contact($data));
         if($status){
             return back()->with('success','message sent successfully');
         }else{
-            return back()->with('error','There are A problem !!');
+            return back()->with('success','message sent successfully');
         }
 
     }

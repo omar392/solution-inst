@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\CourceController;
 use App\Http\Controllers\Frontend\EmploymentController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -44,7 +45,8 @@ Route::get('/employment-subscribe',[EmploymentController::class,'employmentSubsc
 Route::post('save-subscribe',[EmploymentController::class,'saveSubscribe'])->name('save.subscribe');
 
 //contactus
-Route::get('/contact-us',[App\Http\Controllers\Frontend\ContactController::class,'index'])->name('contactus');
+Route::get('/contact-us',[ContactController::class,'index'])->name('contactus');
+Route::post('contact-submit',[ContactController::class,'contactSubmit'])->name('contact.submit');
 
 
 

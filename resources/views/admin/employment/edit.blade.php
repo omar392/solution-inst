@@ -75,13 +75,14 @@
                                         <input class="input-preview__src" id="img" name="image" type="file" />
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group text-center m-t-20">
                                     <div class="col-12">
                                         <button class="btn btn-primary btn-block btn-lg" name="submit"
                                             type="submit">تعديل</button>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>
