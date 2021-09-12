@@ -10,4 +10,19 @@ class Faq extends Model
     use HasFactory;
     
     protected $fillable = ['question_ar','question_en','answer_en','answer_ar','status'];
+
+    public function getQuestionAttribute()
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->question_ar;
+        }
+        return $this->question_en;
+    }
+    public function getAnswerAttribute()
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->answer_ar;
+        }
+        return $this->answer_en;
+    }
 }

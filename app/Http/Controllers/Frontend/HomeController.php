@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Counter;
 use App\Models\Course;
 use App\Models\Customer;
 use App\Models\Setting;
@@ -13,6 +14,7 @@ class HomeController extends Controller
 {
     public function home(){
         $data['setting'] = Setting::first();
+        $data['counter'] = Counter::first();
         $data['slider'] = Slider::where(['status'=>'active'])->get();
         $data['customer'] = Customer::where(['status'=>'active'])->get();
         $data['course'] = Course::where(['status'=>'active'])->get();
