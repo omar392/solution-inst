@@ -16,7 +16,8 @@
                         <li class="breadcrumb-item active">التوظيف</li>
                     </ol>
                 </div>
-            </div> <!-- end row -->
+            </div>
+            <!-- end row -->
             <div class="row">
                 <div class="col-12">
                     <div class="card m-b-30">
@@ -84,7 +85,8 @@
                             </form>
                         </div>
                     </div>
-                </div> <!-- end col -->
+                </div>
+                <!-- end col -->
             </div> 
         </div>
     </div>
