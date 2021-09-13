@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\CourceController;
+use App\Http\Controllers\Frontend\EmploymentController;
+use App\Http\Controllers\Frontend\FaqController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -34,9 +37,21 @@ Route::get('/',[HomeController::class,'home'])->name('website');
 Route::get('/courses',[CourceController::class,'courses'])->name('fronts.courses');
 Route::get('courses-detail/{id}/',[CourceController::class,'coursesDetail'])->name('courses.detail');
 
-//contactus
-Route::get('/contact-us',[App\Http\Controllers\Frontend\ContactController::class,'index'])->name('contactus');
+//employment page
+Route::get('/employment',[EmploymentController::class,'employment'])->name('fronts.employment');
+Route::get('employment-detail/{id}/',[EmploymentController::class,'employmentDetail'])->name('employment.detail');
 
+//employment subscribe
+Route::get('/employment-subscribe',[EmploymentController::class,'employmentSubscribe'])->name('fronts.employment.subscribe');
+Route::post('save-subscribe',[EmploymentController::class,'saveSubscribe'])->name('save.subscribe');
+
+//contactus
+Route::get('/contact-us',[ContactController::class,'index'])->name('contactus');
+Route::post('contact-submit',[ContactController::class,'contactSubmit'])->name('contact.submit');
+
+
+//faqs questions
+Route::get('/faqs',[FaqController::class,'index'])->name('faqs');
 
 
 

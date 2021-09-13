@@ -11,11 +11,11 @@
     <div class="container">
         <div class="row">
             <h3>Email</h3>
-            {{-- <h1>{{ $details['title'] }}</h1>
-            <p>{{ $details['body'] }}</p>
+            <h1>{{ $details['name'] }}</h1>
+            <p>{{ $details['email'] }}</p>
             <p>My Phone Is : {{$details['phone']}}</p>
             <p>My Subject Is : {{$details['subject']}}</p>
-            <p>My Message Is : {{$details['message']}}</p> --}}
+            <p>My Message Is : {{$details['message']}}</p>
             <br>
             <br>
             <p>Best Wishes Solution Makers Institute</p>

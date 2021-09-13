@@ -16,7 +16,8 @@
                         <li class="breadcrumb-item active">التوظيف</li>
                     </ol>
                 </div>
-            </div> <!-- end row -->
+            </div>
+            <!-- end row -->
             <div class="row">
                 <div class="col-12">
                     <div class="card m-b-30">
@@ -74,17 +75,19 @@
                                         <input class="input-preview__src" id="img" name="image" type="file" />
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group text-center m-t-20">
                                     <div class="col-12">
                                         <button class="btn btn-primary btn-block btn-lg" name="submit"
                                             type="submit">تعديل</button>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>
-                </div> <!-- end col -->
+                </div>
+                <!-- end col -->
             </div> 
         </div>
     </div>

@@ -502,6 +502,59 @@
             </div>
         </section>
         <!-- End Become Instructor & Partner Area --> --}}
+
+            <!-- Start Funfacts Area -->
+            <section class="funfacts-area pt-100">
+                <div class="container" dir="ltr">
+                    <div class="funfacts-inner">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-6">
+                                <div class="single-funfact">
+                                    <div class="icon">
+                                        <i class='bx bxs-group'></i>
+                                    </div>
+                                    <h3 class="odometer" data-count="{{$counter->team}}">00</h3>
+                                    <p>Expert team</p>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3 col-md-3 col-6">
+                                <div class="single-funfact">
+                                    <div class="icon">
+                                        <i class='bx bx-book-reader'></i>
+                                    </div>
+                                    <h3 class="odometer" data-count="{{$counter->courses}}">00</h3>
+                                    <p>Total Courses</p>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3 col-md-3 col-6">
+                                <div class="single-funfact">
+                                    <div class="icon">
+                                        <i class='bx bx-user-pin'></i>
+                                    </div>
+                                    <h3 class="odometer" data-count="{{$counter->trainers}}">00</h3>
+                                    <p>Happy Students</p>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-3 col-md-3 col-6">
+                                <div class="single-funfact">
+                                    <div class="icon">
+                                        <i class='bx bxl-deviantart'></i>
+                                    </div>
+                                    <h3 class="odometer" data-count=" {{ $counter->years }} ">00</h3>
+                                    <p>Creative years</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="particles-js-circle-bubble"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Funfacts Area -->
+<br><br>
                 <!-- Start Partner Area -->
                 <section class="partner-area bg-color ptb-100">
                     <div class="container">
