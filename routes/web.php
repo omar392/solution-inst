@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\Frontend\AboutusController;
+use App\Http\Controllers\Frontend\AdvertController;
+use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\CourceController;
 use App\Http\Controllers\Frontend\EmploymentController;
 use App\Http\Controllers\Frontend\FaqController;
+use App\Http\Controllers\Frontend\GalleryController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -49,10 +53,22 @@ Route::post('save-subscribe',[EmploymentController::class,'saveSubscribe'])->nam
 Route::get('/contact-us',[ContactController::class,'index'])->name('contactus');
 Route::post('contact-submit',[ContactController::class,'contactSubmit'])->name('contact.submit');
 
-
 //faqs questions
 Route::get('/faqs',[FaqController::class,'index'])->name('faqs');
 
+//about-us
+Route::get('/gallery',[GalleryController::class,'index'])->name('gallery');
+
+//about-us
+Route::get('/about-us',[AboutusController::class,'index'])->name('aboutus');
+
+//blog
+Route::get('/blog',[BlogController::class,'index'])->name('blog');
+Route::get('blog-detail/{id}/',[BlogController::class,'blogDetails'])->name('blog.detail');
+
+//advert
+Route::get('/advert',[AdvertController::class,'index'])->name('advert');
+Route::get('advert-detail/{id}/',[AdvertController::class,'advertDetails'])->name('advert.detail');
 
 
 
