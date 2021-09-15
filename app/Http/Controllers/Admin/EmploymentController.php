@@ -48,6 +48,7 @@ class EmploymentController extends Controller
             'file' => 'required|mimes:pdf,xlx,csv|max:2048',
             'image'=>'required',
             'status'=>'nullable|in:active,inactive',
+            'type'=>'nullable',
         ]);
         $data = $request->all();
         if($request->file('file')){
@@ -143,6 +144,8 @@ class EmploymentController extends Controller
                 'file' => 'required|mimes:pdf,xlx,csv|max:2048',
                 'image'=>'required',
                 'status'=>'nullable|in:active,inactive',
+                'type'=>'nullable',
+
             ]);
             $data = $request->all();
         

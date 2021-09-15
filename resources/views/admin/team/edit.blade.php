@@ -56,7 +56,7 @@
                                 <div class="form-group row">
                                     <label class="input-preview" for="img">أضف صورة</label>
                                     <div class="col-sm-10">
-                                        <input class="input-preview__src" id="img" name="image" type="file" value="{{url('upload/team/' . $team->images)}}" />
+                                        <input class="input-preview__src" id="img" name="image" type="file" value="{{url('upload/team/' . $team->images)}}" required />
                                     </div>
                                 </div>
                                 {{-- <div class="form-group row">

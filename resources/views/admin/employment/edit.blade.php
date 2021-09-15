@@ -62,6 +62,19 @@
                                             id="example-text-input" placeholder="التخصص" value="{{$employment->special}}" required>
                                     </div>
                                 </div>
+
+                                <div class="form-group row">
+                                    <label for="example-text-input"
+                                        class="col-sm-2 col-form-label">الحالة</label>
+                                    <div class="col-sm-10">
+                                        <select name="type" class="form-control show-tick">
+                                            <option value="">--التوظيف--</option>
+                                            <option value="available" {{$employment->type=='available'?'selected':''}}>موظف</option>
+                                            <option value="notavailable" {{$employment->type=='notavailable'?'selected':''}}>غير موظف</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="form-group row">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">الملف</label>
                                     <div class="col-sm-10">
@@ -72,7 +85,7 @@
                                 <div class="form-group row">
                                     <label class="input-preview" for="img">أضف صورة</label>
                                     <div class="col-sm-10">
-                                        <input class="input-preview__src" id="img" name="image" type="file" />
+                                        <input class="input-preview__src" id="img" name="image" type="file" required />
                                     </div>
                                 </div>
 

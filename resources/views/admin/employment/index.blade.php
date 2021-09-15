@@ -87,7 +87,20 @@
                                             <div class="form-group row">
                                                 <label class="input-preview" for="img">أضف صورة</label>
                                                 <div class="col-sm-10">
-                                                    <input class="input-preview__src" id="img" name="image" type="file" />
+                                                    <input class="input-preview__src" id="img" name="image" type="file" required />
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="example-text-input"
+                                                    class="col-sm-2 col-form-label">الحالة</label>
+                                                <div class="col-sm-10">
+                                                    <select name="type" class="form-control show-tick">
+                                                        <option value="">--التوظيف--</option>
+                                                        <option value="available" {{ old('type') == 'available' ? 'selected' : '' }}>
+                                                            موظف</option>
+                                                        <option value="notavailable"
+                                                            {{ old('type') == 'notavailable' ? 'selected' : '' }}>غير موظف</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -197,6 +210,8 @@
                                                                 <h5 class="font-16" style="font-family: cairo;">الهاتف : {{$employment->phone}} </h5>
                                                                 <h5 class="font-16" style="font-family: cairo;">التخصص : {{$employment->special}} </h5>
                                                                 <h5 class="font-16" style="font-family: cairo;">التخصص : {{$employment->special}} </h5>
+                                                                {{-- {{ $item->status == 'active' ? 'checked' : '' }} --}}
+                                                                <h5 class="font-16" style="font-family: cairo;">التوظيف : {{$employment->type}} </h5>
                                                                 <h5 class="font-16" style="font-family: cairo;">الصورة : </h5>
                                                                 <img src="{{ asset('upload/employment/' . $employment->image) }}" alt="image" style="width: 250px;height: 250px;border-radius: 30px;">
                                                                 <h5 class="font-16" style="font-family: cairo;">الملف الشخصى CV : <a href="{{asset('upload/employment/' . $employment->file)}}" download>تحميل ملف CV</a> </h5>

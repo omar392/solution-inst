@@ -22,7 +22,7 @@ class CreateEmploymentsTable extends Migration
             $table->string('special');
             $table->string('file');
             $table->string('image');
-            $table->string('type');
+            $table->enum('type',['available','notavailable'])->default('available');
             $table->enum('status',['active','inactive'])->default('inactive');
             $table->timestamps();
         });
