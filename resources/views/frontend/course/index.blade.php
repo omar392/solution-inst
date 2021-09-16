@@ -6,10 +6,10 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Courses</li>
+                    <li><a href="{{route('website')}}">{{__('web.home')}}</a></li>
+                    <li>{{__('web.course')}}</li>
                 </ul>
-                <h2>Courses</h2>
+                <h2 style="font-family: cairo;">{{__('web.course')}}</h2>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 col-md-4">
                         <div class="topbar-result-count">
-                            <p>Courses : {{ \App\Models\Course::count() }}</p>
+                            <p style="font-family: cairo;">{{__('web.allcourse')}} : {{ \App\Models\Course::count() }}</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
 
                             <div class="courses-content">
                                 <div class="course-author d-flex align-items-center">
-                                    <img src="{{ asset('frontend/assets/img/user1.jpg') }}" class="rounded-circle mr-2"
+                                    <img src="{{ asset('upload/course/' . $item->image) }}" class="rounded-circle mr-2"
                                         alt="image">
                                 </div>
 

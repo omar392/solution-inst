@@ -15,7 +15,7 @@
                         <div>
                             <h3 style="font-family: cairo;">{{$item->title}}</h3>
                             <p><strong style="font-family: cairo;">{!! $item->description !!}</strong></p>
-                            <a href="about-style-1.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">{{__('web.learn')}}</span><i class="bx bx-user-pin icon-arrow after"></i></a>
+                            <a href="{{route('aboutus')}}" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">{{__('web.learn')}}</span><i class="bx bx-user-pin icon-arrow after"></i></a>
                         </div>
                         @endforeach
                     </div>
@@ -514,7 +514,7 @@
                                         <i class='bx bxs-group'></i>
                                     </div>
                                     <h3 class="odometer" data-count="{{$counter->team}}">00</h3>
-                                    <p>Expert team</p>
+                                    <p style="font-family: cairo;">{{__('web.team')}}</p>
                                 </div>
                             </div>
     
@@ -524,7 +524,7 @@
                                         <i class='bx bx-book-reader'></i>
                                     </div>
                                     <h3 class="odometer" data-count="{{$counter->courses}}">00</h3>
-                                    <p>Total Courses</p>
+                                    <p style="font-family: cairo;">{{__('web.course')}}</p>
                                 </div>
                             </div>
     
@@ -534,7 +534,7 @@
                                         <i class='bx bx-user-pin'></i>
                                     </div>
                                     <h3 class="odometer" data-count="{{$counter->trainers}}">00</h3>
-                                    <p>Happy Students</p>
+                                    <p style="font-family: cairo;">{{__('web.students')}}</p>
                                 </div>
                             </div>
     
@@ -544,7 +544,7 @@
                                         <i class='bx bxl-deviantart'></i>
                                     </div>
                                     <h3 class="odometer" data-count=" {{ $counter->years }} ">00</h3>
-                                    <p>Creative years</p>
+                                    <p style="font-family: cairo;">{{__('web.years')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -559,7 +559,7 @@
                 <section class="partner-area bg-color ptb-100">
                     <div class="container">
                         <div class="section-title">
-                            <h2>Our Company & Partners</h2>
+                            <h2 style="font-family: cairo;">{{__('web.partner')}}</h2>
                         </div>
                         <div class="partner-slides owl-carousel owl-theme">
                             @foreach ($customer as $item)

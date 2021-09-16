@@ -6,10 +6,10 @@
             <div class="container">
                 <div class="page-title-content">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>About Us</li>
+                        <li><a href="{{route('website')}}">{{__('web.home')}}</a></li>
+                        <li>{{__('web.about')}}</li>
                     </ul>
-                    <h2>About Us</h2>
+                    <h2 style="font-family: cairo;">{{__('web.about')}}</h2>
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@
         
                             <div class="col-lg-6 col-md-12">
                                 <div class="about-content">
-                                    <span class="sub-title">About Us</span>
-                                    <h6>We can support student forum 24/7 for national and international students.</h6>
+                                    <span class="sub-title">{{__('web.about')}}</span>
+                                    {{-- <h6>We can support student forum 24/7 for national and international students.</h6> --}}
                                     <p style="font-family: cairo;">{{$aboutus->about}}</p>
                                 </div>
                             </div>
@@ -37,16 +37,23 @@
         
                         <div class="about-inner-area">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="about-text">
-                                        <h3>Mission</h3>
+                                        <h3 style="font-family: cairo;">{{__('web.mission')}}</h3>
                                         <p style="font-family: cairo;">{{$aboutus->mission}}</p>
                                     </div>
                                 </div>
         
-                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="about-text">
-                                        <h3>Vision</h3>
+                                        <h3 style="font-family: cairo;">{{__('web.vision')}}</h3>
+                                        <p style="font-family: cairo;">{{$aboutus->vision}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="about-text">
+                                        <h3 style="font-family: cairo;">{{__('web.goals')}}</h3>
                                         <p style="font-family: cairo;">{{$aboutus->vision}}</p>
                                     </div>
                                 </div>
@@ -60,8 +67,8 @@
         <section class="team-area pb-100">
             <div class="container">
                 <div class="section-title">
-                    <span class="sub-title">Make Connections</span>
-                    <h2>Our Team</h2>
+                    <span class="sub-title">{{__('web.team')}}</span>
+                    {{-- <h2 style="font-family: cairo;">{{__('web.team')}}</h2> --}}
                 </div>
 
                 <div class="row">

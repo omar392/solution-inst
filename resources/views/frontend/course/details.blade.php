@@ -6,10 +6,10 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Courses</li>
+                    <li><a href="{{route('website')}}">{{__('web.home')}}</a></li>
+                    <li>{{__('web.course')}}</li>
                 </ul>
-                <h2>Courses</h2>
+                <h2 style="font-family: cairo;">{{__('web.course')}}</h2>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
 
                         <div class="col-lg-4">
                             <div class="courses-price">
-                                <a href="{{$course->course_link}}" target="_blank" class="default-btn"><i class='bx bx-paper-plane icon-arrow before'></i><span class="label">Subscribe Now</span><i class="bx bx-paper-plane icon-arrow after"></i></a>
+                                <a href="{{$course->course_link}}" target="_blank" class="default-btn"><i class='bx bx-paper-plane icon-arrow before'></i><span class="label">{{__('web.sub')}}</span><i class="bx bx-paper-plane icon-arrow after"></i></a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="courses-details-desc">
-                            <h3 style="font-family: cairo;">Description</h3>
+                            <h3 style="font-family: cairo;">{{__('web.description')}}</h3>
                             <p><strong style="font-family: cairo;">{!! $course->description !!}</strong></p>
                         </div>
                     </div>
@@ -50,44 +50,21 @@
                         <div class="courses-sidebar-information">
                             <ul>
                                 <li>
-                                    <span><i class='bx bx-group'></i> Students:</span>
-                                    10
+                                    <span><i class='bx bx-group'></i> {{__('web.students')}}:</span>
+                                    {{$counter->trainers}}
                                 </li>
                                 <li>
-                                    <span><i class='bx bx-time'></i> Length:</span>
-                                    1 Weeks
+                                    <span><i class='bx bx-time'></i> {{__('web.years')}}:</span>
+                                    {{ $counter->years }}
                                 </li>
                                 <li>
-                                    <span><i class='bx bx-tachometer'></i> Effort:</span>
-                                    2–5 hours per week
+                                    <span><i class='bx bxs-institution'></i> {{__('web.team')}}:</span>
+                                    <a href="#" class="d-inline-block">{{$counter->team}}</a>
                                 </li>
                                 <li>
-                                    <span><i class='bx bxs-institution'></i> Institution:</span>
-                                    <a href="#" class="d-inline-block">ABC</a>
+                                    <span><i class='bx bx-atom'></i> {{__('web.course')}}:</span>
+                                    {{$counter->courses}}
                                 </li>
-                                <li>
-                                    <span><i class='bx bxs-graduation'></i> Subject:</span>
-                                    Design
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-atom'></i> Quizzes:</span>
-                                    Yes
-                                </li>
-                                <li>
-                                    <span><i class='bx bxs-badge-check'></i> Level:</span>
-                                    Introductory
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-support'></i> Language:</span>
-                                    English
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-text'></i> Video Subtitle:</span>
-                                    English
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-certification'></i> Certificate:</span>
-                                    Yes
                                 </li>
                             </ul>
                         </div>

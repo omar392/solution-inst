@@ -48,32 +48,37 @@
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu">
+
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="{{route('website')}}" class="nav-link active">{{__('web.home')}}</a>
+                            
+                            <li class="nav-item"><a href="{{route('website')}}" class="nav-link {{ URL::route('website') === URL::current() ? 'active' : '' }}">{{__('web.home')}}</a>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Courses</a>
+                            <li class="nav-item"><a href="{{route('aboutus')}}" class="nav-link {{ URL::route('aboutus') === URL::current() ? 'active' : '' }}">{{__('web.about')}}</a>
+                            </li>
+                            
+                            <li class="nav-item"><a href="{{route('fronts.courses')}}" class="nav-link {{ URL::route('fronts.courses') === URL::current() ? 'active' : '' }}">{{__('web.course')}}</a>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Blog</a>
+                            <li class="nav-item"><a href="{{route('fronts.employment')}}" class="nav-link {{ URL::route('fronts.employment') === URL::current() ? 'active' : '' }}">{{__('web.employment')}}</a>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }} {{ URL::route('gallery') === URL::current() ? 'active' : '' }} {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.pages')}} <i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
-
-                                    <li class="nav-item"><a href="shop-grid-fullwidth.html" class="nav-link">Shop Grid FullWidth</a></li>
-
-                                    <li class="nav-item"><a href="single-product.html" class="nav-link">Products Details</a></li>
-                                    
-                                    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
-
-                                    <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
+                                    <li class="nav-item"><a href="{{route('blog')}}" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }}">{{__('web.blog')}}</a>
+                                    </li>
+                                    <li class="nav-item"><a href="{{route('gallery')}}" class="nav-link {{ URL::route('gallery') === URL::current() ? 'active' : '' }}">{{__('web.gallery')}}</a>
+                                    </li>
+                                    <li class="nav-item"><a href="{{route('advert')}}" class="nav-link {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.advert')}}</a>
+                                    </li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                            <li class="nav-item"><a href="{{route('contactus')}}" class="nav-link {{ URL::route('contactus') === URL::current() ? 'active' : '' }}">{{__('web.contact')}}</a>
+                            </li>
+
                         </ul>
+
                         <div class="others-option">
                             <div class="dropdown language-switcher d-inline-block">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -110,147 +115,35 @@
                     </a>
 
                     <div class="collapse navbar-collapse">
+
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="{{route('website')}}" class="nav-link">{{__('web.home')}}</a>
+                            
+                            <li class="nav-item"><a href="{{route('website')}}" class="nav-link {{ URL::route('website') === URL::current() ? 'active' : '' }}">{{__('web.home')}}</a>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>
+                            <li class="nav-item"><a href="{{route('aboutus')}}" class="nav-link {{ URL::route('aboutus') === URL::current() ? 'active' : '' }}">{{__('web.about')}}</a>
+                            </li>
+                            
+                            <li class="nav-item"><a href="{{route('fronts.courses')}}" class="nav-link {{ URL::route('fronts.courses') === URL::current() ? 'active' : '' }}">{{__('web.course')}}</a>
+                            </li>
+
+                            <li class="nav-item"><a href="{{route('fronts.employment')}}" class="nav-link {{ URL::route('fronts.employment') === URL::current() ? 'active' : '' }}">{{__('web.employment')}}</a>
+                            </li>
+
+                            <li class="nav-item"><a href="#" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }} {{ URL::route('gallery') === URL::current() ? 'active' : '' }} {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.pages')}} <i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#" class="nav-link">About <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="about-style-1.html" class="nav-link">About Style 1</a></li>
-
-                                            <li class="nav-item"><a href="about-style-2.html" class="nav-link">About Style 2</a></li>
-
-                                            <li class="nav-item"><a href="about-style-3.html" class="nav-link">About Style 3</a></li>
-
-                                            <li class="nav-item"><a href="about-style-4.html" class="nav-link">About Style 4</a></li>
-                                        </ul>
+                                    <li class="nav-item"><a href="{{route('blog')}}" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }}">{{__('web.blog')}}</a>
                                     </li>
-                                    
-                                    <li class="nav-item"><a href="#" class="nav-link">Instructor <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="team-1.html" class="nav-link">Instructor Style 1</a></li>
-    
-                                            <li class="nav-item"><a href="team-2.html" class="nav-link">Instructor Style 2</a></li>
-
-                                            <li class="nav-item"><a href="team-3.html" class="nav-link">Instructor Style 3</a></li>
-
-                                            <li class="nav-item"><a href="single-instructor.html" class="nav-link">Instructor Details</a></li>
-                                        </ul>
+                                    <li class="nav-item"><a href="{{route('gallery')}}" class="nav-link {{ URL::route('gallery') === URL::current() ? 'active' : '' }}">{{__('web.gallery')}}</a>
                                     </li>
-
-                                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Events <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-
-                                            <li class="nav-item"><a href="single-events.html" class="nav-link">Events Details</a></li>
-                                        </ul>
+                                    <li class="nav-item"><a href="{{route('advert')}}" class="nav-link {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.advert')}}</a>
                                     </li>
-
-                                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-
-                                    <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
-
-                                    <li class="nav-item"><a href="partner.html" class="nav-link">Partner</a></li>
-
-                                    <li class="nav-item"><a href="login.html" class="nav-link">Log In</a></li>
-
-                                    <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
-
-                                    <li class="nav-item"><a href="faqs.html" class="nav-link">FAQ's</a></li>
-
-                                    <li class="nav-item"><a href="error-404.html" class="nav-link">404 Error</a></li>
-
-                                    <li class="nav-item"><a href="coming-soon.html" class="nav-link">Comign Soon</a></li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Category <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-category-style-1.html" class="nav-link">Category Style 1</a></li>
-
-                                            <li class="nav-item"><a href="courses-category-style-2.html" class="nav-link">Category Style 2</a></li>
-
-                                            <li class="nav-item"><a href="courses-category-style-3.html" class="nav-link">Category Style 3</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="courses-list.html" class="nav-link">Courses List</a></li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 1 <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-2-columns-style-1.html" class="nav-link">2 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-3-columns-style-1.html" class="nav-link">3 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-4-columns-style-1.html" class="nav-link">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 2 <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-2-columns-style-2.html" class="nav-link">2 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-3-columns-style-2.html" class="nav-link">3 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-4-columns-style-2.html" class="nav-link">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 3 <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="courses-2-columns-style-3.html" class="nav-link">2 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-3-columns-style-3.html" class="nav-link">3 Columns</a></li>
-
-                                            <li class="nav-item"><a href="courses-4-columns-style-3.html" class="nav-link">4 Columns Full Width</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses Details <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="single-courses.html" class="nav-link">Courses Details 1</a></li>
-
-                                            <li class="nav-item"><a href="single-courses-2.html" class="nav-link">Courses Details 2</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="nav-item"><a href="my-account.html" class="nav-link">My Account</a></li>
-                                </ul>
+                            <li class="nav-item"><a href="{{route('contactus')}}" class="nav-link {{ URL::route('contactus') === URL::current() ? 'active' : '' }}">{{__('web.contact')}}</a>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Blog <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="blog-style-1.html" class="nav-link">Blog Grid</a></li>
-
-                                    <li class="nav-item"><a href="blog-style-2.html" class="nav-link">Blog Right Sidebar</a></li>
-
-                                    <li class="nav-item"><a href="blog-style-3.html" class="nav-link">Blog Grid Full Width</a></li>
-
-                                    <li class="nav-item"><a href="single-blog.html" class="nav-link">Blog Details</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="#" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
-
-                                    <li class="nav-item"><a href="shop-grid-fullwidth.html" class="nav-link">Shop Grid FullWidth</a></li>
-
-                                    <li class="nav-item"><a href="single-product.html" class="nav-link">Products Details</a></li>
-                                    
-                                    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
-
-                                    <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                         </ul>
 
                         <div class="others-option">
@@ -278,5 +171,5 @@
         </div>
     </div>
     <!-- End Sticky Navbar Area -->
-    
+
 </header>
