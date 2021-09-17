@@ -1,5 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
+@section('pageTitle',__('web.advert|'))
+
 
         <!-- Start Page Title Area -->
         <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>

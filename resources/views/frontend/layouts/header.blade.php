@@ -62,14 +62,16 @@
 
                             <li class="nav-item"><a href="{{route('fronts.employment')}}" class="nav-link {{ URL::route('fronts.employment') === URL::current() ? 'active' : '' }}">{{__('web.employment')}}</a>
                             </li>
-
-                            <li class="nav-item"><a href="#" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }} {{ URL::route('gallery') === URL::current() ? 'active' : '' }} {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.pages')}} <i class='bx bx-chevron-down'></i></a>
+                            
+                            <li class="nav-item"><a href="#" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }} {{ URL::route('gallery') === URL::current() ? 'active' : '' }} {{ URL::route('advert') === URL::current() ? 'active' : '' }} {{ URL::route('faqs') === URL::current() ? 'active' : '' }} ">{{__('web.pages')}} <i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="{{route('blog')}}" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }}">{{__('web.blog')}}</a>
                                     </li>
                                     <li class="nav-item"><a href="{{route('gallery')}}" class="nav-link {{ URL::route('gallery') === URL::current() ? 'active' : '' }}">{{__('web.gallery')}}</a>
                                     </li>
                                     <li class="nav-item"><a href="{{route('advert')}}" class="nav-link {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.advert')}}</a>
+                                    </li>
+                                    <li class="nav-item"><a href="{{route('faqs')}}" class="nav-link {{ URL::route('faqs') === URL::current() ? 'active' : '' }}">{{__('web.faqs')}}</a>
                                     </li>
                                 </ul>
                             </li>
@@ -130,13 +132,15 @@
                             <li class="nav-item"><a href="{{route('fronts.employment')}}" class="nav-link {{ URL::route('fronts.employment') === URL::current() ? 'active' : '' }}">{{__('web.employment')}}</a>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }} {{ URL::route('gallery') === URL::current() ? 'active' : '' }} {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.pages')}} <i class='bx bx-chevron-down'></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }} {{ URL::route('gallery') === URL::current() ? 'active' : '' }} {{ URL::route('advert') === URL::current() ? 'active' : '' }} {{ URL::route('faqs') === URL::current() ? 'active' : '' }} ">{{__('web.pages')}} <i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="{{route('blog')}}" class="nav-link {{ URL::route('blog') === URL::current() ? 'active' : '' }}">{{__('web.blog')}}</a>
                                     </li>
                                     <li class="nav-item"><a href="{{route('gallery')}}" class="nav-link {{ URL::route('gallery') === URL::current() ? 'active' : '' }}">{{__('web.gallery')}}</a>
                                     </li>
                                     <li class="nav-item"><a href="{{route('advert')}}" class="nav-link {{ URL::route('advert') === URL::current() ? 'active' : '' }}">{{__('web.advert')}}</a>
+                                    </li>
+                                    <li class="nav-item"><a href="{{route('faqs')}}" class="nav-link {{ URL::route('faqs') === URL::current() ? 'active' : '' }}">{{__('web.faqs')}}</a>
                                     </li>
                                 </ul>
                             </li>

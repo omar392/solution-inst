@@ -1,5 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
+@section('pageTitle',__('web.faqs|'))
+
 
     <!-- Start Page Title Area -->
     <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
@@ -44,40 +46,26 @@
             </section>
             <!-- End FAQ Area -->
     
-            <!-- Start Become Instructor & Partner Area -->
-            <section class="become-instructor-partner-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="become-instructor-partner-content bg-color">
-                                <h2>Become an Instructor</h2>
-                                <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                                <a href="login.html" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-6 col-md-6">
-                            <div class="become-instructor-partner-image bg-image1 jarallax" data-jarallax='{"speed": 0.3}'>
-                                <img src="{{asset('frontend/assets/img/become-instructor.jpg')}}" alt="image">
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-6 col-md-6">
-                            <div class="become-instructor-partner-image bg-image2 jarallax" data-jarallax='{"speed": 0.3}'>
-                                <img src="{{asset('frontend/assets/img/become-partner.jpg')}}" alt="image">
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-6 col-md-6">
-                            <div class="become-instructor-partner-content">
-                                <h2>Become a Partner</h2>
-                                <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                                <a href="login.html" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Contact Us</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
-                            </div>
+        <!-- Start Feedback Area -->
+        <section class="feedback-area ptb-100">
+            <div class="container">
+                <div class="feedback-slides owl-carousel owl-theme">
+
+                    @foreach ($opinions as $item)
+                    <div class="single-feedback-item">
+                        <p>“{!! $item->description !!}”</p>
+
+                        <div class="info">
+                            <h3 style="font-family: cairo;">{{$item->name}}</h3>
+                            <span>{{$item->job}}</span>
+                            <img src="{{ asset('upload/opinion/' . $item->image) }}" class="shadow rounded-circle" alt="image">
                         </div>
                     </div>
+                    @endforeach
+
                 </div>
-            </section>
-            <!-- End Become Instructor & Partner Area -->
+            </div>
+        </section>
+        <!-- End Feedback Area -->
 
 @endsection
