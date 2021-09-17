@@ -6,10 +6,10 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Employment</li>
+                    <li><a href="{{route('website')}}">{{__('web.home')}}</a></li>
+                    <li>{{__('web.employment')}}</li>
                 </ul>
-                <h2>Employment</h2>
+                <h2 style="font-family: cairo;">{{__('web.employment')}}</h2>
             </div>
         </div>
     </div>
@@ -21,22 +21,19 @@
                         <div class="row align-items-center">
                             <div class="col-lg-4 col-md-4">
                                 <div class="topbar-result-count">
-                                    <p>Members : {{ \App\Models\Employment::count() }}</p>
+                                    <p style="font-family: cairo;">{{__('web.number')}} : {{ \App\Models\Employment::count() }}</p>
                                 </div>
                             </div>
-    
-                            <div class="col-lg-8 col-md-8">
-                                <div class="topbar-ordering-and-search">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-3 col-md-5 offset-lg-4 offset-md-1 col-sm-6">
-                                            <div class="product-add-to-cart">
-                                                <button type="submit" class="default-btn"><i class='bx bxs-download icon-arrow before'></i><span class="label">Upload</span>
-                                                <i class="bx bxs-downloadicon-arrow after"></i></button>
-                                            </div>
-                                        </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-footer-widget mb-30">
+                                    <h3 style="font-family: cairo;">{{__('web.employment')}}</h3>
+                                    <div class="newsletter-box">
+                                        <a href="{{route('fronts.employment.subscribe')}}" class="default-btn"><i class='bx bx-paper-plane icon-arrow before'></i><span class="label">{{__('web.sub')}}</span><i class="bx bx-paper-plane icon-arrow after"></i></a>                      
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -52,7 +49,7 @@
                                         <img src="{{ asset('upload/employment/' . $item->image) }}" alt="image">
                                     </a>
                                     <a href="{{route('employment.detail',[$item->id])}}" class="add-to-cart-btn">Details</a>
-                                    <div class="sale-btn">Sale!</div>
+                                    <div class="sale-btn">{{$item->type}}</div>
                                 </div>
                                 <div class="product-content">
                                     <h3><a href="{{route('employment.detail',[$item->id])}}">{{$item->name}}</a></h3>
@@ -61,6 +58,20 @@
                             </div>
                         </div>
                         @endforeach
+                        
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="pagination-area text-center">
+
+                        
+                        {{-- {!! $course->links() !!}  --}}
+                        <span class="page-numbers current" aria-current="page">{!! $employment->appends(['sort' => 'science-stream'])->links() !!}</span>
+                            {{-- <a href="#" class="page-numbers">2</a>
+                        <a href="#" class="page-numbers">3</a>
+                            <a href="#" class="page-numbers">4</a>
+                            <a href="#" class="page-numbers">5</a>
+                        <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a> --}}
+                    </div>
+                </div>
                     </div>
                 </div>
             </section>

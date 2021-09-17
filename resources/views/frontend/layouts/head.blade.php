@@ -26,25 +26,30 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/rtl.css')}}">
     @endif
     <title>صناع الحلول</title>
+    
     <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
     <link rel="icon" type="image/png" href="{{asset('frontend/assets/img/logo_braw30_30.png')}}">
 </head>
-@if (app()->getLocale() == 'ar')
+
 <style>
+  @if (app()->getLocale() == 'ar')
       body {
         font-family: 'Cairo';
         /* font-size: 18px; */
     }
+    @endif
+
+    
     [aria-current] .page-link {
-        background-color: red !important;
+        background-color: #ff1949 !important;
     }
 
     [rel='prev'], [rel='next'] {
-        background-color: red !important;
+        background-color: #ff1949 !important;
     }
 
     .pagination > li :not([rel='prev'],[rel='next'],[aria-current] .page-link) {
-        background-color: red !important;
+        background-color: #ff1949 !important;
     }
 
     #custom-button {
@@ -89,4 +94,3 @@ body {
 	transition: ease-in-out 750ms;
 }
 </style>
-@endif

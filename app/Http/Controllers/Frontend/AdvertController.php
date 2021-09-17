@@ -14,7 +14,7 @@ class AdvertController extends Controller
 
         $data['setting'] = Setting::first();
         $data['counter'] = Counter::first();
-        $data['adverts'] = Advert::where(['status'=>'active'])->paginate(10);
+        $data['adverts'] = Advert::where(['status'=>'active'])->paginate(20);
 
         return view('frontend.advert.index',$data);
 

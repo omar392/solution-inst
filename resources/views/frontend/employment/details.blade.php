@@ -5,10 +5,10 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Employment</li>
+                    <li><a href="{{route('website')}}">{{__('web.home')}}</a></li>
+                    <li>{{__('web.employment')}}</li>
                 </ul>
-                <h2>Employment</h2>
+                <h2 style="font-family: cairo;">{{__('web.employment')}}</h2>
             </div>
         </div>
     </div>
@@ -32,10 +32,11 @@
                             <h3>{{$employment->name}}</h3>
 
                             <div class="product-meta">
-                                <span>Email: <span class="sku">{{$employment->email}}</span></span>
-                                <span>Phone: <span class="in-stock">{{$employment->phone}}</span></span>
-                                <span>Address: {{$employment->address}}</span>
-                                <span>Special: {{$employment->special}}</span>
+                                <span>{{__('web.email')}} : <span class="sku">{{$employment->email}}</span></span>
+                                <span>{{__('web.phone')}}: <span class="in-stock">{{$employment->phone}}</span></span>
+                                <span>{{__('web.address')}}: {{$employment->address}}</span>
+                                <span>{{__('web.special')}}: {{$employment->special}}</span>
+                                <span>{{__('web.employment')}}: {{$employment->type}}</span>
                                 {{-- <span>CV: <a href="{{asset('upload/employment/' . $employment->file)}}" download>تحميل CV</a></span> --}}
                             </div>
 

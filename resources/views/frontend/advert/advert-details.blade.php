@@ -6,10 +6,10 @@
             <div class="container">
                 <div class="page-title-content">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>Advert</li>
+                        <li><a href="{{route('website')}}">{{__('web.home')}}</a></li>
+                        <li>{{__('web.advert')}}</li>
                     </ul>
-                    <h2 style="font-family: cairo;">{{$advert->title}}</h2>
+                    {{-- <h2 style="font-family: cairo;">{{$advert->title}}</h2> --}}
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="courses-details-desc">
-                            <h3 style="font-family: cairo;">Description</h3>
+                            <h3 style="font-family: cairo;">{{__('web.description')}}</h3>
                             <p><strong style="font-family: cairo;">{!! $advert->description !!}</strong></p>
                         </div>
                     </div>
@@ -44,44 +44,21 @@
                         <div class="courses-sidebar-information">
                             <ul>
                                 <li>
-                                    <span><i class='bx bx-group'></i> Students:</span>
-                                    10
+                                    <span><i class='bx bx-group'></i> {{__('web.students')}}:</span>
+                                    {{$counter->trainers}}
                                 </li>
                                 <li>
-                                    <span><i class='bx bx-time'></i> Length:</span>
-                                    1 Weeks
+                                    <span><i class='bx bx-time'></i> {{__('web.years')}}:</span>
+                                    {{ $counter->years }}
                                 </li>
                                 <li>
-                                    <span><i class='bx bx-tachometer'></i> Effort:</span>
-                                    2–5 hours per week
+                                    <span><i class='bx bxs-institution'></i> {{__('web.team')}}:</span>
+                                    <a href="#" class="d-inline-block">{{$counter->team}}</a>
                                 </li>
                                 <li>
-                                    <span><i class='bx bxs-institution'></i> Institution:</span>
-                                    <a href="#" class="d-inline-block">ABC</a>
+                                    <span><i class='bx bx-atom'></i> {{__('web.course')}}:</span>
+                                    {{$counter->courses}}
                                 </li>
-                                <li>
-                                    <span><i class='bx bxs-graduation'></i> Subject:</span>
-                                    Design
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-atom'></i> Quizzes:</span>
-                                    Yes
-                                </li>
-                                <li>
-                                    <span><i class='bx bxs-badge-check'></i> Level:</span>
-                                    Introductory
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-support'></i> Language:</span>
-                                    English
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-text'></i> Video Subtitle:</span>
-                                    English
-                                </li>
-                                <li>
-                                    <span><i class='bx bx-certification'></i> Certificate:</span>
-                                    Yes
                                 </li>
                             </ul>
                         </div>

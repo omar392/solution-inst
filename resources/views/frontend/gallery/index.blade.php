@@ -6,10 +6,10 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Gallery</li>
+                    <li><a href="{{route('website')}}">{{__('web.home')}}</a></li>
+                    <li>{{__('web.gallery')}}</li>
                 </ul>
-                <h2>Gallery</h2>
+                <h2 style="font-family: cairo;">{{__('web.gallery')}}</h2>
             </div>
         </div>
     </div>

@@ -30,6 +30,24 @@ return [
     'vision'=>'Our Vision',
     'goals'=>'Our Goals',
     'description'=>'Description',
+    'email'=>'Email',
+    'address'=>'Address',
+    'phone'=>'Phone Number',
+    'drop'=>'Leave us your complaint, suggestion or inquiry and you will receive a reply',
+    'cname'=>'Please enter your name',
+    'cemail'=>'Please enter your email',
+    'cphone'=>'Please enter your mobile phone',
+    'csubject'=>'Please Enter Your subject',
+    'cmessage'=>'Please enter your message content',
+    'number'=>'Total Number',
+    'special'=>'Specialist At',
+    'apply'=>'Apply Now',
+    'upload'=>'Upload Your C.V',
+    'send'=>'Send',
+    'readmore'=>'Read More',
+
+
+
 
 ];
 ?>

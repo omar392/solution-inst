@@ -11,7 +11,7 @@ class EmploymentController extends Controller
 {
     public function employment(){
         $data['setting'] = Setting::first();
-        $data['employment']  = Employment::where(['status'=>'active'])->paginate(20);
+        $data['employment']  = Employment::where(['status'=>'active'])->paginate(10);
 
         return view('frontend.employment.index',$data);
     }

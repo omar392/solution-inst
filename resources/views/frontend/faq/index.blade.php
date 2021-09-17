@@ -6,7 +6,7 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{route('website')}}">Home</a></li>
                     <li>Employment</li>
                 </ul>
                 <h2>Employment</h2>

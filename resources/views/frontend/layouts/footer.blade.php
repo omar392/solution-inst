@@ -8,7 +8,7 @@
                     <ul class="contact-us-link">
                         <li>
                             <i class='bx bx-map'></i>
-                            <a href="" target="_blank">{!! $setting->address !!}</a>
+                            <a href="https://www.google.com/maps/place/%D9%85%D8%B9%D9%87%D8%AF+%D8%B5%D9%86%D8%A7%D8%B9+%D8%A7%D9%84%D8%AD%D9%84%D9%88%D9%84+%D9%84%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%E2%80%AD/@24.7978229,46.655851,17z/data=!3m1!4b1!4m5!3m4!1s0x3e2ee3417708846b:0xc9f2ed488eae48b2!8m2!3d24.797818!4d46.6536623" target="_blank">{!! $setting->address !!}</a>
                         </li>
                         <li>
                             <i class='bx bx-phone-call'></i>

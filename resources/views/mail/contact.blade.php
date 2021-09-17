@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <h3>Email</h3>
+            <h3>New Email From Solution Makeres Website Inst</h3>
             <h1>{{ $details['name'] }}</h1>
             <p>{{ $details['email'] }}</p>
             <p>My Phone Is : {{$details['phone']}}</p>
@@ -18,7 +18,7 @@
             <p>My Message Is : {{$details['message']}}</p>
             <br>
             <br>
-            <p>Best Wishes Solution Makers Institute</p>
+            <p>Best Wishes This Email From the Website</p>
         </div>
     </div>
 </body>

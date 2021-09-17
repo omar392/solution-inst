@@ -31,7 +31,7 @@ class ContactController extends Controller
         
         $data = $request->all();
         // return $data;
-        $status = Mail::to('omarabosamaha@gmail.com')->send(new Contact($data));
+        $status = Mail::to('info@solutionmakers.com.sa')->send(new Contact($data));
         if($status){
             return back()->with('success','message sent successfully');
         }else{

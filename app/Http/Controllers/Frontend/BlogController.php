@@ -14,7 +14,7 @@ class BlogController extends Controller
 
         $data['setting'] = Setting::first();
         $data['counter'] = Counter::first();
-        $data['blogs'] = Bolg::where(['status'=>'active'])->paginate(10);
+        $data['blogs'] = Bolg::where(['status'=>'active'])->paginate(15);
 
         return view('frontend.blog.index',$data);
 

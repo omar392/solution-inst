@@ -54,14 +54,14 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="pagination-area text-center">
 
-                        {!! $course->links() !!}
-                        {{-- {!! $course->appends(['sort' => 'science-stream'])->links() !!} --}}
-                        {{-- <span class="page-numbers current" aria-current="page">1</span>
-                            <a href="#" class="page-numbers">2</a> --}}
-                        {{-- <a href="#" class="page-numbers">3</a>
+                        
+                        {{-- {!! $course->links() !!}  --}}
+                        <span class="page-numbers current" aria-current="page">{!! $course->appends(['sort' => 'science-stream'])->links() !!}</span>
+                            {{-- <a href="#" class="page-numbers">2</a>
+                        <a href="#" class="page-numbers">3</a>
                             <a href="#" class="page-numbers">4</a>
-                            <a href="#" class="page-numbers">5</a> --}}
-                        {{-- <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a> --}}
+                            <a href="#" class="page-numbers">5</a>
+                        <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a> --}}
                     </div>
                 </div>
             </div>
