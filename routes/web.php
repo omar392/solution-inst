@@ -85,7 +85,7 @@ Route::get('command', function () {
 
 Auth::routes([
 'register'=>false,
-'login'=>false,
+// 'login'=>false,
 ]);
 
 
