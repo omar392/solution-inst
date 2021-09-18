@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Bolg;
 use App\Models\Counter;
+use App\Models\Seo;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,8 @@ class BlogController extends Controller
 
         $data['setting'] = Setting::first();
         $data['counter'] = Counter::first();
+        $data['seo'] = Seo::first();
+
         $data['blogs'] = Bolg::where(['status'=>'active'])->paginate(15);
 
         return view('frontend.blog.index',$data);
@@ -23,6 +26,8 @@ class BlogController extends Controller
     public function blogDetails($id){
         $data['setting'] = Setting::first();
         $data['counter'] = Counter::first();
+        $data['seo'] = Seo::first();
+
         $data['blogs'] = Bolg::where(['status'=>'active'])->get();
         $blog= Bolg::findOrFail($id);
 

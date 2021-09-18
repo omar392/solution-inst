@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Employment;
+use App\Models\Seo;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,7 @@ class EmploymentController extends Controller
 {
     public function employment(){
         $data['setting'] = Setting::first();
+        $data['seo'] = Seo::first();
         $data['employment']  = Employment::where(['status'=>'active'])->paginate(10);
 
         return view('frontend.employment.index',$data);
@@ -20,6 +22,8 @@ class EmploymentController extends Controller
     public function employmentDetail($id){
 
         $data['setting'] = Setting::first();
+        $data['seo'] = Seo::first();
+
         $employment= Employment::findOrFail($id);
         
         return view('frontend.employment.details',$data,compact('employment'));
@@ -29,6 +33,7 @@ class EmploymentController extends Controller
     public function employmentSubscribe(){
 
         $data['setting'] = Setting::first();
+        $data['seo'] = Seo::first();
 
         return view('frontend.employment.subscribe',$data);
 

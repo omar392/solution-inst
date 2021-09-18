@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Mail\Contact;
 use App\Http\Controllers\Controller;
 use App\Mail\Contact as MailContact;
+use App\Models\Seo;
 // use App\Models\Contact;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ class ContactController extends Controller
 
 
         $data['setting'] = Setting::first();
+        $data['seo'] = Seo::first();
 
 
         return view('frontend.contact.index',$data);

@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GallaryController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\OpinionController;
+use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
@@ -29,6 +30,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function () 
 //settings
 Route::get('setting',[SettingController::class,'index'])->name('setting');
 Route::post('setting',[SettingController::class,'update'])->name('updatesetting');
+
+//seo
+Route::get('seo',[SeoController::class,'index'])->name('seo');
+Route::post('seo',[SeoController::class,'update'])->name('updateseo');
 
 
 //counter

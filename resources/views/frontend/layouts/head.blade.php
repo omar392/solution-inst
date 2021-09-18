@@ -24,11 +24,21 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
     @if (app()->getLocale() == 'ar')
     <link rel="stylesheet" href="{{asset('frontend/assets/css/rtl.css')}}">
-    @endif
-    <title> {{__('web.company')}}@yield('pageTitle')</title>
-    
+    @endif   
     <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
     <link rel="icon" type="image/png" href="{{asset('frontend/assets/img/logo_braw30_30.png')}}">
+    <title> {{__('web.company')}}@yield('pageTitle')</title>
+
+    <meta name="keywords" content="{{$seo->key}}" />
+    <meta name="description" content="{{$seo->description}}" />
+    
+    <meta name="locale" content="en_sa">
+    <meta name="og:type" content="website" />
+    <meta name="og:site_name" content="{{$seo->site}}" />
+    <meta name="og:url" content="" />
+  
+    <meta name="og:description" content="{{$seo->description}}" />
+
 </head>
 
 <style>

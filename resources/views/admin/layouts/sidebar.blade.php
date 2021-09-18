@@ -77,6 +77,11 @@
                                 <i class="fas fa-cog"></i><span style="font-family: cairo;">إعدادات الموقع</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{route('seo')}}" class="waves-effect">
+                                <i class="fas fa-search"></i><span style="font-family: cairo;">إعدادات محركات البحث</span>
+                            </a>
+                        </li>
                     </ul>
 
                 </div>
