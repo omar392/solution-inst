@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminsController;
 use App\Http\Controllers\Admin\AdvertController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CounterController;
@@ -45,6 +46,10 @@ Route::post('counter',[CounterController::class,'update'])->name('updatecounter'
 Route::get('about',[AboutController::class,'index'])->name('about');
 Route::post('about',[AboutController::class,'update'])->name('updateabout');
 
+
+//Admins 
+Route::resource('admins', AdminsController::class);
+Route::post('admins_status',[AdminsController::class,'adminsStatus'])->name('admins.status');
 
 //our team 
 Route::resource('team', TeamController::class);

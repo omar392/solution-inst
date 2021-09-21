@@ -27,6 +27,26 @@
                     <div class="row">
 
                         <div class="col-sm-6 col-xl-4">
+                            <a href="{{route('admins.index')}}">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-account-group bg-danger text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16" style="font-family: cairo;" >المديرين</h5>
+                                    </div>
+                                    <h3 class="mt-4">{{\App\Models\Admin::count()}}</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{\App\Models\Team::count()}}%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="text-muted mt-2 mb-0">العدد الموجود<span class="float-right">{{\App\Models\Team::count()}}</span></p>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-4">
                             <a href="{{route('course.index')}}">
                             <div class="card">
                                 <div class="card-heading p-4">

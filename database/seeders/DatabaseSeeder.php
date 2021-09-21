@@ -19,12 +19,12 @@ class DatabaseSeeder extends Seeder
         $this->call(AboutSeeder::class);
         $this->call(CounterSeeder::class);
         $this->call(SeoSeeder::class);
-        \App\Models\Slider::factory(5)->create();
-        \App\Models\Customer::factory(15)->create();
-        \App\Models\Course::factory(30)->create();
-        \App\Models\Gallary::factory(50)->create();
-        \App\Models\Bolg::factory(30)->create();
-        \App\Models\Advert::factory(30)->create();
+        // \App\Models\Slider::factory(5)->create();
+        // \App\Models\Customer::factory(15)->create();
+        // \App\Models\Course::factory(30)->create();
+        // \App\Models\Gallary::factory(50)->create();
+        // \App\Models\Bolg::factory(30)->create();
+        // \App\Models\Advert::factory(30)->create();
         
     }
 }

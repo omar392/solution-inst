@@ -13,6 +13,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{route('admins.index')}}" class="waves-effect">
+                                <i class="fas fa-user-lock"></i><span style="font-family: cairo;">المديرين</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{route('course.index')}}" class="waves-effect">
                                 <i class="fas fa-university"></i><span style="font-family: cairo;">المسارات التدريببية</span>
                             </a>
