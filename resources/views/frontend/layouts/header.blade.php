@@ -7,7 +7,7 @@
                     <ul class="top-header-contact-info">
                         <li>
                             {{__('web.call')}}: 
-                            <a href="tel:502464674">{{$setting->phone}}</a>
+                            <a href="tel:{{$setting->phone}}">{{$setting->phone}}</a>
                         </li>
                     </ul>
 
@@ -27,7 +27,7 @@
     </div>
 
     <!-- Start Navbar Area -->
-    <div class="navbar-area navbar-style-three">
+    <div class="navbar-area navbar-style-three mobile-nav">
         <div class="raque-responsive-nav">
             <div class="container">
                 <div class="raque-responsive-menu">

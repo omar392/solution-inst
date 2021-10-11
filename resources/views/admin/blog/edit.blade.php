@@ -8,12 +8,12 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <h4 class="page-title" style="font-family: cairo;">المدونة و المقالات</h4>
+                    <h4 class="page-title" style="font-family: cairo;">المبادرات</h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="{{route('adminhome')}}">الرئيسية</a></li>
-                        <li class="breadcrumb-item active">المدونة و المقالات</li>
+                        <li class="breadcrumb-item active">المبادرات</li>
                     </ol>
                 </div>
             </div> <!-- end row -->
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="example-text-input"
-                                        class="col-sm-2 col-form-label">المقال</label>
+                                        class="col-sm-2 col-form-label">التفاصيل</label>
                                     <div class="col-sm-10">
                                         <textarea class="form-control" name="description_ar" id="editor5">{!! $blog->description_ar !!}</textarea>
                                     <script>
@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Article</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
                                     <div class="col-sm-10">
                                         <textarea class="form-control" name="description_en" id="editor">{!! $blog->description_en !!}</textarea>
                                         <script>

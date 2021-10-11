@@ -2,7 +2,7 @@
 @section('content')
 
         <!-- Start Mission Area -->
-        <section class="mission-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
+        <section class="mission-area ptb-100 jarallax" style="background-image:url({{asset('frontend/assets/img/2.png')}})" data-jarallax='{"speed": 0.3}'>
             <div class="container">
                 <div class="mission-content">
                     <div class="section-title text-left">

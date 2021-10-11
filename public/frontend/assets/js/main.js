@@ -1,4 +1,4 @@
-jQuery(function ($) {
+jQuery(function($) {
     'use strict';
 
     // Mean Menu
@@ -7,33 +7,42 @@ jQuery(function ($) {
     });
 
     // Header Sticky
-    $(window).on('scroll',function() {
-        if ($(this).scrollTop() > 120){  
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 120) {
             $('.header-sticky').addClass("is-sticky");
-        }
-        else{
+        } else {
             $('.header-sticky').removeClass("is-sticky");
         }
     });
     var c, currentScrollTop = 0,
-    navbar = $('.header-sticky');
-    $(window).scroll(function () {
+        navbar = $('.header-sticky');
+    $(window).scroll(function() {
         var a = $(window).scrollTop();
         var b = navbar.height();
         currentScrollTop = a;
         if (c < currentScrollTop && a > b + b) {
-            navbar.addClass("scrollUp");
+            // navbar.addClass("scrollUp");
         } else if (c > currentScrollTop && !(a <= b)) {
-            navbar.removeClass("scrollUp");
+            // navbar.removeClass("scrollUp");
         }
         c = currentScrollTop;
     });
 
+    // mobile navbar fixes top after scroll
+    $(window).bind('scroll', function() {
+        var navHeight = $('.mobile-nav').height();
+        if ($(window).scrollTop() > navHeight) {
+            $('.mobile-nav').addClass('mobile-nav-sticky');
+        } else {
+            $('.mobile-nav').removeClass('mobile-nav-sticky');
+        }
+    });
+
     // Search Menu JS
-    $(".others-option .search-box i").on("click", function(){
+    $(".others-option .search-box i").on("click", function() {
         $(".search-overlay").toggleClass("search-overlay-active");
     });
-    $(".search-overlay-close").on("click", function(){
+    $(".search-overlay-close").on("click", function() {
         $(".search-overlay").removeClass("search-overlay-active");
     });
 
@@ -52,14 +61,14 @@ jQuery(function ($) {
             "<i class='bx bx-chevron-right'></i>"
         ]
     });
-    $(".home-slides").on("translate.owl.carousel", function(){
+    $(".home-slides").on("translate.owl.carousel", function() {
         $(".main-banner-content .sub-title").removeClass("animated fadeInDown").css("opacity", "0");
         $(".main-banner-content h1").removeClass("animated fadeInUp").css("opacity", "0");
         $(".main-banner-content p").removeClass("animated fadeInUp").css("opacity", "0");
         $(".main-banner-content .default-btn").removeClass("animated fadeInLeft").css("opacity", "0");
         $(".main-banner-content .optional-btn, .main-banner-content .video-btn").removeClass("animated fadeInUp").css("opacity", "0");
     });
-    $(".home-slides").on("translated.owl.carousel", function(){
+    $(".home-slides").on("translated.owl.carousel", function() {
         $(".main-banner-content .sub-title").addClass("animated fadeInDown").css("opacity", "1");
         $(".main-banner-content h1").addClass("animated fadeInUp").css("opacity", "1");
         $(".main-banner-content p").addClass("animated fadeInUp").css("opacity", "1");
@@ -155,7 +164,7 @@ jQuery(function ($) {
             }
         }
     });
-    
+
     // Blog Slides
     $('.blog-slides').owlCarousel({
         loop: true,
@@ -211,7 +220,7 @@ jQuery(function ($) {
             }
         }
     });
-    
+
     // Mission Slides
     $('.mission-slides').owlCarousel({
         loop: true,
@@ -267,17 +276,17 @@ jQuery(function ($) {
             $(this).html(countNumber);
         });
     });
-    
+
     // Count Time 
     function makeTimer() {
-        var endTime = new Date("September 20, 2025 17:00:00 PDT");			
+        var endTime = new Date("September 20, 2025 17:00:00 PDT");
         var endTime = (Date.parse(endTime)) / 1000;
         var now = new Date();
         var now = (Date.parse(now) / 1000);
         var timeLeft = endTime - now;
-        var days = Math.floor(timeLeft / 86400); 
+        var days = Math.floor(timeLeft / 86400);
         var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-        var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+        var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
         var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
         if (hours < "10") { hours = "0" + hours; }
         if (minutes < "10") { minutes = "0" + minutes; }
@@ -288,69 +297,107 @@ jQuery(function ($) {
         $("#seconds").html(seconds + "<span>Seconds</span>");
     }
     setInterval(function() { makeTimer(); }, 0);
-    
+
     // Particles Js
-    if(document.getElementById("particles-js-circle-bubble")) particlesJS("particles-js-circle-bubble", {
+    if (document.getElementById("particles-js-circle-bubble")) particlesJS("particles-js-circle-bubble", {
         "particles": {
             "number": {
-                "value": 300, "density": {
-                    "enable": true, "value_area": 800
+                "value": 300,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
                 }
             },
             "color": {
                 "value": "#ffffff"
             },
             "shape": {
-                "type":"circle", "stroke": {
-                    "width": 0, "color": "#000000"
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
                 },
                 "polygon": {
                     "nb_sides": 5
                 },
                 "image": {
-                    "src": "img/github.svg", "width": 100, "height": 100
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
                 }
             },
             "opacity": {
-                "value":1, "random":true, "anim": {
-                    "enable": true, "speed": 1, "opacity_min": 0, "sync": false
+                "value": 1,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
                 }
             },
             "size": {
-                "value":3, "random":true, "anim": {
-                    "enable": false, "speed": 4, "size_min": 0.3, "sync": false
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 4,
+                    "size_min": 0.3,
+                    "sync": false
                 }
             },
             "line_linked": {
-                "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
             },
             "move": {
-                "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
-                    "enable": false, "rotateX": 600, "rotateY": 600
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 600
                 }
             }
         },
         "interactivity": {
-            "detect_on":"canvas", "events": {
+            "detect_on": "canvas",
+            "events": {
                 "onhover": {
-                    "enable": true, "mode": "bubble"
+                    "enable": true,
+                    "mode": "bubble"
                 },
                 "onclick": {
-                    "enable": true, "mode": "repulse"
+                    "enable": true,
+                    "mode": "repulse"
                 },
-                "resize":true
+                "resize": true
             },
             "modes": {
                 "grab": {
-                    "distance":400, "line_linked": {
+                    "distance": 400,
+                    "line_linked": {
                         "opacity": 1
                     }
                 },
                 "bubble": {
-                    "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3
+                    "distance": 250,
+                    "size": 0,
+                    "duration": 2,
+                    "opacity": 0,
+                    "speed": 3
                 },
                 "repulse": {
-                    "distance": 400, "duration": 0.4
+                    "distance": 400,
+                    "duration": 0.4
                 },
                 "push": {
                     "particles_nb": 4
@@ -360,69 +407,107 @@ jQuery(function ($) {
                 }
             }
         },
-        "retina_detect":true
+        "retina_detect": true
     });
-    if(document.getElementById("particles-js-circle-bubble-2")) particlesJS("particles-js-circle-bubble-2", {
+    if (document.getElementById("particles-js-circle-bubble-2")) particlesJS("particles-js-circle-bubble-2", {
         "particles": {
             "number": {
-                "value": 100, "density": {
-                    "enable": true, "value_area": 800
+                "value": 100,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
                 }
             },
             "color": {
                 "value": ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"]
             },
             "shape": {
-                "type":"circle", "stroke": {
-                    "width": 0, "color": "#000000"
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
                 },
                 "polygon": {
                     "nb_sides": 5
                 },
                 "image": {
-                    "src": "img/github.svg", "width": 100, "height": 100
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
                 }
             },
             "opacity": {
-                "value":1, "random":true, "anim": {
-                    "enable": true, "speed": 1, "opacity_min": 0, "sync": false
+                "value": 1,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
                 }
             },
             "size": {
-                "value":3, "random":true, "anim": {
-                    "enable": false, "speed": 4, "size_min": 0.3, "sync": false
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 4,
+                    "size_min": 0.3,
+                    "sync": false
                 }
             },
             "line_linked": {
-                "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
             },
             "move": {
-                "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
-                    "enable": false, "rotateX": 600, "rotateY": 600
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 600
                 }
             }
         },
         "interactivity": {
-            "detect_on":"canvas", "events": {
+            "detect_on": "canvas",
+            "events": {
                 "onhover": {
-                    "enable": true, "mode": "bubble"
+                    "enable": true,
+                    "mode": "bubble"
                 },
                 "onclick": {
-                    "enable": true, "mode": "repulse"
+                    "enable": true,
+                    "mode": "repulse"
                 },
-                "resize":true
+                "resize": true
             },
             "modes": {
                 "grab": {
-                    "distance":400, "line_linked": {
+                    "distance": 400,
+                    "line_linked": {
                         "opacity": 1
                     }
                 },
                 "bubble": {
-                    "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3
+                    "distance": 250,
+                    "size": 0,
+                    "duration": 2,
+                    "opacity": 0,
+                    "speed": 3
                 },
                 "repulse": {
-                    "distance": 400, "duration": 0.4
+                    "distance": 400,
+                    "duration": 0.4
                 },
                 "push": {
                     "particles_nb": 4
@@ -432,69 +517,107 @@ jQuery(function ($) {
                 }
             }
         },
-        "retina_detect":true
+        "retina_detect": true
     });
-    if(document.getElementById("particles-js-circle-bubble-3")) particlesJS("particles-js-circle-bubble-3", {
+    if (document.getElementById("particles-js-circle-bubble-3")) particlesJS("particles-js-circle-bubble-3", {
         "particles": {
             "number": {
-                "value": 100, "density": {
-                    "enable": true, "value_area": 800
+                "value": 100,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
                 }
             },
             "color": {
                 "value": ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"]
             },
             "shape": {
-                "type":"circle", "stroke": {
-                    "width": 0, "color": "#000000"
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
                 },
                 "polygon": {
                     "nb_sides": 5
                 },
                 "image": {
-                    "src": "img/github.svg", "width": 100, "height": 100
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
                 }
             },
             "opacity": {
-                "value":1, "random":true, "anim": {
-                    "enable": true, "speed": 1, "opacity_min": 0, "sync": false
+                "value": 1,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
                 }
             },
             "size": {
-                "value":3, "random":true, "anim": {
-                    "enable": false, "speed": 4, "size_min": 0.3, "sync": false
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 4,
+                    "size_min": 0.3,
+                    "sync": false
                 }
             },
             "line_linked": {
-                "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
             },
             "move": {
-                "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
-                    "enable": false, "rotateX": 600, "rotateY": 600
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 600
                 }
             }
         },
         "interactivity": {
-            "detect_on":"canvas", "events": {
+            "detect_on": "canvas",
+            "events": {
                 "onhover": {
-                    "enable": true, "mode": "bubble"
+                    "enable": true,
+                    "mode": "bubble"
                 },
                 "onclick": {
-                    "enable": true, "mode": "repulse"
+                    "enable": true,
+                    "mode": "repulse"
                 },
-                "resize":true
+                "resize": true
             },
             "modes": {
                 "grab": {
-                    "distance":400, "line_linked": {
+                    "distance": 400,
+                    "line_linked": {
                         "opacity": 1
                     }
                 },
                 "bubble": {
-                    "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3
+                    "distance": 250,
+                    "size": 0,
+                    "duration": 2,
+                    "opacity": 0,
+                    "speed": 3
                 },
                 "repulse": {
-                    "distance": 400, "duration": 0.4
+                    "distance": 400,
+                    "duration": 0.4
                 },
                 "push": {
                     "particles_nb": 4
@@ -504,69 +627,107 @@ jQuery(function ($) {
                 }
             }
         },
-        "retina_detect":true
+        "retina_detect": true
     });
-    if(document.getElementById("particles-js-circle-bubble-4")) particlesJS("particles-js-circle-bubble-4", {
+    if (document.getElementById("particles-js-circle-bubble-4")) particlesJS("particles-js-circle-bubble-4", {
         "particles": {
             "number": {
-                "value": 100, "density": {
-                    "enable": true, "value_area": 800
+                "value": 100,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
                 }
             },
             "color": {
                 "value": ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"]
             },
             "shape": {
-                "type":"circle", "stroke": {
-                    "width": 0, "color": "#000000"
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
                 },
                 "polygon": {
                     "nb_sides": 5
                 },
                 "image": {
-                    "src": "img/github.svg", "width": 100, "height": 100
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
                 }
             },
             "opacity": {
-                "value":1, "random":true, "anim": {
-                    "enable": true, "speed": 1, "opacity_min": 0, "sync": false
+                "value": 1,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
                 }
             },
             "size": {
-                "value":3, "random":true, "anim": {
-                    "enable": false, "speed": 4, "size_min": 0.3, "sync": false
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 4,
+                    "size_min": 0.3,
+                    "sync": false
                 }
             },
             "line_linked": {
-                "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
             },
             "move": {
-                "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": {
-                    "enable": false, "rotateX": 600, "rotateY": 600
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 600
                 }
             }
         },
         "interactivity": {
-            "detect_on":"canvas", "events": {
+            "detect_on": "canvas",
+            "events": {
                 "onhover": {
-                    "enable": true, "mode": "bubble"
+                    "enable": true,
+                    "mode": "bubble"
                 },
                 "onclick": {
-                    "enable": true, "mode": "repulse"
+                    "enable": true,
+                    "mode": "repulse"
                 },
-                "resize":true
+                "resize": true
             },
             "modes": {
                 "grab": {
-                    "distance":400, "line_linked": {
+                    "distance": 400,
+                    "line_linked": {
                         "opacity": 1
                     }
                 },
                 "bubble": {
-                    "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3
+                    "distance": 250,
+                    "size": 0,
+                    "duration": 2,
+                    "opacity": 0,
+                    "speed": 3
                 },
                 "repulse": {
-                    "distance": 400, "duration": 0.4
+                    "distance": 400,
+                    "duration": 0.4
                 },
                 "push": {
                     "particles_nb": 4
@@ -576,57 +737,57 @@ jQuery(function ($) {
                 }
             }
         },
-        "retina_detect":true
+        "retina_detect": true
     });
 
     // Gallery Viewer JS
-    var console = window.console || { log: function () {} };
+    var console = window.console || { log: function() {} };
     var $images = $('.gallery-area');
     var options = {
         // inline: true,
         url: 'data-original',
-        ready: function (e) {
+        ready: function(e) {
             console.log(e.type);
         },
-        show: function (e) {
+        show: function(e) {
             console.log(e.type);
         },
-        shown: function (e) {
+        shown: function(e) {
             console.log(e.type);
         },
-        hide: function (e) {
+        hide: function(e) {
             console.log(e.type);
         },
-        hidden: function (e) {
+        hidden: function(e) {
             console.log(e.type);
         },
-        view: function (e) {
+        view: function(e) {
             console.log(e.type);
         },
-        viewed: function (e) {
+        viewed: function(e) {
             console.log(e.type);
         }
     };
     $images.on({
-        ready:  function (e) {
+        ready: function(e) {
             console.log(e.type);
         },
-        show:  function (e) {
+        show: function(e) {
             console.log(e.type);
         },
-        shown:  function (e) {
+        shown: function(e) {
             console.log(e.type);
         },
-        hide:  function (e) {
+        hide: function(e) {
             console.log(e.type);
         },
-        hidden: function (e) {
+        hidden: function(e) {
             console.log(e.type);
         },
-        view:  function (e) {
+        view: function(e) {
             console.log(e.type);
         },
-        viewed: function (e) {
+        viewed: function(e) {
             console.log(e.type);
         }
     }).viewer(options);
@@ -650,7 +811,7 @@ jQuery(function ($) {
         } else {
             this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
         var that = this;
         var delta = 200 - Math.random() * 100;
         if (this.isDeleting) { delta /= 2; }
@@ -668,7 +829,7 @@ jQuery(function ($) {
     };
     window.onload = function() {
         var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
+        for (var i = 0; i < elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
             var period = elements[i].getAttribute('data-period');
             if (toRotate) {
@@ -730,9 +891,9 @@ jQuery(function ($) {
 
     // Tabs
     $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
-    $('.tab ul.tabs li a').on('click', function (g) {
-        var tab = $(this).closest('.tab'), 
-        index = $(this).closest('li').index();
+    $('.tab ul.tabs li a').on('click', function(g) {
+        var tab = $(this).closest('.tab'),
+            index = $(this).closest('li').index();
         tab.find('ul.tabs > li').removeClass('current');
         $(this).closest('li').addClass('current');
         tab.find('.tab-content').find('div.tabs-item').not('div.tabs-item:eq(' + index + ')').slideUp();
@@ -743,18 +904,17 @@ jQuery(function ($) {
     // Input Plus & Minus Number JS
     $('.input-counter').each(function() {
         var spinner = jQuery(this),
-        input = spinner.find('input[type="text"]'),
-        btnUp = spinner.find('.plus-btn'),
-        btnDown = spinner.find('.minus-btn'),
-        min = input.attr('min'),
-        max = input.attr('max');
-        
+            input = spinner.find('input[type="text"]'),
+            btnUp = spinner.find('.plus-btn'),
+            btnDown = spinner.find('.minus-btn'),
+            min = input.attr('min'),
+            max = input.attr('max');
+
         btnUp.on('click', function() {
             var oldValue = parseFloat(input.val());
             if (oldValue >= max) {
                 var newVal = oldValue;
-            } 
-            else {
+            } else {
                 var newVal = oldValue + 1;
             }
             spinner.find("input").val(newVal);
@@ -764,8 +924,7 @@ jQuery(function ($) {
             var oldValue = parseFloat(input.val());
             if (oldValue <= min) {
                 var newVal = oldValue;
-            } 
-            else {
+            } else {
                 var newVal = oldValue - 1;
             }
             spinner.find("input").val(newVal);
@@ -805,55 +964,56 @@ jQuery(function ($) {
                 dots: true
             }
         }],
-        customPaging: function (slider, i) {
+        customPaging: function(slider, i) {
             return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>';
         }
     });
-    
+
     // FAQ Accordion
-    $('.accordion').find('.accordion-title').on('click', function(){
+    $('.accordion').find('.accordion-title').on('click', function() {
         $(this).toggleClass('active');
         $(this).next().slideToggle('fast');
         $('.accordion-content').not($(this).next()).slideUp('fast');
-        $('.accordion-title').not($(this)).removeClass('active');		
+        $('.accordion-title').not($(this)).removeClass('active');
     });
-    
+
     // Subscribe form
-    $(".newsletter-form").validator().on("submit", function (event) {
+    $(".newsletter-form").validator().on("submit", function(event) {
         if (event.isDefaultPrevented()) {
             formErrorSub();
             submitMSGSub(false, "Please enter your email correctly.");
-        } 
-        else {
+        } else {
             event.preventDefault();
         }
     });
-    function callbackFunction (resp) {
+
+    function callbackFunction(resp) {
         if (resp.result === "success") {
             formSuccessSub();
-        }
-        else {
+        } else {
             formErrorSub();
         }
     }
-    function formSuccessSub(){
+
+    function formSuccessSub() {
         $(".newsletter-form")[0].reset();
         submitMSGSub(true, "Thank you for subscribing!");
         setTimeout(function() {
             $("#validator-newsletter").addClass('hide');
         }, 4000)
     }
-    function formErrorSub(){
+
+    function formErrorSub() {
         $(".newsletter-form").addClass("animated shake");
         setTimeout(function() {
             $(".newsletter-form").removeClass("animated shake");
         }, 1000)
     }
-    function submitMSGSub(valid, msg){
-        if(valid){
+
+    function submitMSGSub(valid, msg) {
+        if (valid) {
             var msgClasses = "validation-success";
-        } 
-        else {
+        } else {
             var msgClasses = "validation-danger";
         }
         $("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
@@ -865,13 +1025,13 @@ jQuery(function ($) {
     });
 
     // Go to Top
-    $(window).on('scroll', function(){
+    $(window).on('scroll', function() {
         var scrolled = $(window).scrollTop();
         if (scrolled > 300) $('.go-top').addClass('active');
         if (scrolled < 300) $('.go-top').removeClass('active');
-    });  
+    });
     $('.go-top').on('click', function() {
-        $("html, body").animate({ scrollTop: "0" },  500);
+        $("html, body").animate({ scrollTop: "0" }, 500);
     });
 
     // Health Coaching Banner Slides
@@ -925,13 +1085,13 @@ jQuery(function ($) {
             "<i class='flaticon-right-arrow'></i>"
         ]
     });
-    $(".gym-home-slides").on("translate.owl.carousel", function(){
+    $(".gym-home-slides").on("translate.owl.carousel", function() {
         $(".gym-banner-content .sub-title").removeClass("animated fadeInDown").css("opacity", "0");
         $(".gym-banner-content h1").removeClass("animated fadeInUp").css("opacity", "0");
         $(".gym-banner-content p").removeClass("animated fadeInUp").css("opacity", "0");
         $(".gym-banner-content .default-btn").removeClass("animated fadeInLeft").css("opacity", "0");
     });
-    $(".gym-home-slides").on("translated.owl.carousel", function(){
+    $(".gym-home-slides").on("translated.owl.carousel", function() {
         $(".gym-banner-content .sub-title").addClass("animated fadeInDown").css("opacity", "1");
         $(".gym-banner-content h1").addClass("animated fadeInUp").css("opacity", "1");
         $(".gym-banner-content p").addClass("animated fadeInUp").css("opacity", "1");
@@ -939,8 +1099,8 @@ jQuery(function ($) {
     });
 
     // Preloader JS
-	$(window).on('load', function() {
-		$('.preloader').addClass('preloader-deactivate');
-	});
+    $(window).on('load', function() {
+        $('.preloader').addClass('preloader-deactivate');
+    });
 
 }(jQuery));

@@ -3,7 +3,7 @@
 @section('pageTitle',__('web.blog|'))
 
         <!-- Start Page Title Area -->
-        <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
+        <div class="page-title-area item-bg2 jarallax" style="background-image:url({{asset('frontend/assets/img/blog.png')}})" data-jarallax='{"speed": 0.3}'>
             <div class="container">
                 <div class="page-title-content">
                     <ul>

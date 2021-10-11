@@ -94,7 +94,7 @@
                                         <i class="mdi mdi-pencil-outline bg-danger text-white"></i>
                                     </div>
                                     <div>
-                                        <h5 class="font-16" style="font-family: cairo;" >المدونة و المقالات</h5>
+                                        <h5 class="font-16" style="font-family: cairo;" >المبادرات</h5>
                                     </div>
                                     {{-- <h3 class="mt-4">{{\App\Models\Bolg::where('status','inactive')->count()}}</h3> --}}
                                     <h3 class="mt-4">{{\App\Models\Bolg::count()}}</h3>

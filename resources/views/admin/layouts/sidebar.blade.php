@@ -24,7 +24,7 @@
                         </li>
                         <li>
                             <a href="{{route('blog.index')}}" class="waves-effect">
-                                <i class="far fa-edit"></i><span style="font-family: cairo;">  المدونة و المقالات  </span>
+                                <i class="far fa-edit"></i><span style="font-family: cairo;">  المبادرات</span>
                             </a>
                         </li>
                         <li>

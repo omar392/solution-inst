@@ -7,12 +7,12 @@
             <div class="page-title-box">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
-                        <h4 class="page-title" style="font-family: cairo;">المدونة و المقالات</h4>
+                        <h4 class="page-title" style="font-family: cairo;">المبادرات</h4>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item"><a href="{{ route('adminhome') }}">الرئيسية</a></li>
-                            <li class="breadcrumb-item active">المدونة و المقالات</li>
+                            <li class="breadcrumb-item active">المبادرات</li>
                         </ol>
                     </div>
                 </div> <!-- end row -->
@@ -21,7 +21,7 @@
                     <div class="text-center">
                         <!-- Large modal -->
                         <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal"
-                            data-target=".bs-example-modal-lg"><i class="fas fa-plus-circle"></i>إضافة مقال جديد</button>
+                            data-target=".bs-example-modal-lg"><i class="fas fa-plus-circle"></i>إضافة مبادرة جديدة</button>
                     </div>
                     <!--  Modal content for the above example -->
                     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
@@ -29,7 +29,7 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title mt-0" id="myLargeModalLabel" style="font-family: cairo;">إضافة مقال جديد</h5>
+                                    <h5 class="modal-title mt-0" id="myLargeModalLabel" style="font-family: cairo;">إضافة مبادرة جديدة</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -45,19 +45,19 @@
                                                     class="col-sm-2 col-form-label">العنوان</label>
                                                 <div class="col-sm-10">
                                                     <input class="form-control" type="text" name="title_ar"
-                                                        id="example-text-input" placeholder="عنوان المقال" required>
+                                                        id="example-text-input" placeholder="عنوان " required>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
                                                 <div class="col-sm-10">
                                                     <input class="form-control" name="title_en"
-                                                        id="example-text-input" placeholder="Article Title" required>
+                                                        id="example-text-input" placeholder=" Title" required>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="example-text-input"
-                                                    class="col-sm-2 col-form-label">المقال</label>
+                                                    class="col-sm-2 col-form-label">التفاصيل</label>
                                                 <div class="col-sm-10">
                                                     <textarea class="form-control" name="description_ar" id="editor5"></textarea>
                                                 <script>
@@ -66,7 +66,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="example-text-input" class="col-sm-2 col-form-label">Article</label>
+                                                <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
                                                 <div class="col-sm-10">
                                                     <textarea class="form-control" name="description_en" id="editor"></textarea>
                                                     <script>

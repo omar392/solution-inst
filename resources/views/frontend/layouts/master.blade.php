@@ -6,12 +6,12 @@
     <body>
 
         <!-- Preloader -->
-        <div class="preloader">
+        {{-- <div class="preloader">
             <div class="loader">
                 <div class="shadow"></div>
                 <div class="box"></div>
             </div>
-        </div>
+        </div> --}}
         <!-- End Preloader -->
 
         <!-- Start Header Area -->

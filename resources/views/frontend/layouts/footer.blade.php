@@ -40,7 +40,7 @@
                         <li><a href="{{route('fronts.courses')}}">{{__('web.course')}}</a></li>
                         <li><a href="{{route('fronts.employment')}}">{{__('web.employment')}}</a></li>
                         
-                        <li><a href="{{route('fronts.employment')}}">{{__('web.employment')}}</a></li>
+                        <li><a href="{{route('faqs')}}">{{__('web.faqs')}}</a></li>
                         <li><a href="{{route('contactus')}}">{{__('web.contact')}}</a></li>
                     </ul>
                 </div>
@@ -76,7 +76,7 @@
             <div class="logo">
                 <a href="{{route('website')}}" class="d-inline-block"><img src="{{asset('frontend/assets/img/logo164_45.png')}}" alt="image"></a>
             </div>
-            <p><i class='bx bx-copyright'></i>2021 <a href="#" target="_blank"></a> Programming By <a href="#" target="_blank">Green Way</a> | All rights reserved</p>
+            <p><i class='bx bx-copyright'></i>{{ now()->year }} <a href="#" target="_blank"></a> Programming By <a href="#" target="_blank">Green Way</a> | All rights reserved</p>
         </div>
     </div>
 </footer>

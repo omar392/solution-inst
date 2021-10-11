@@ -440,7 +440,7 @@ Preloader CSS
 .preloader .box {
     width: 100%;
     height: 100%;
-    background: #ffffff;
+    background: #A31312;
     -webkit-animation: animate .5s linear infinite;
     animation: animate .5s linear infinite;
     position: absolute;
@@ -470,7 +470,7 @@ Preloader CSS
     width: 60%;
     height: 100%;
     z-index: -1;
-    background: #A31312;
+    background: #ffffff;
     -webkit-transition: .9s;
     transition: .9s;
 }
@@ -700,7 +700,7 @@ Header CSS
 }
 
 .top-header-style-three {
-    background-color: #1D1D1D;
+    background-color: #A31312;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -17585,6 +17585,15 @@ Gym Main Banner Area CSS
 .gym-home-slides.owl-theme:hover .owl-nav {
     opacity: 1;
     visibility: visible;
+}
+
+.mobile-nav-sticky {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 999999;
+    top: 0;
+    left: 0;
 }
 
 
