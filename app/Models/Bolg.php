@@ -9,7 +9,7 @@ class Bolg extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['image','title_ar','title_en','description_ar','description_en','status'];
+    protected $fillable = ['image','title_ar','title_en','description_ar','description_en','status','url'];
 
     public function getTitleAttribute()
     {

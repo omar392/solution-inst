@@ -16,6 +16,7 @@ class CreateBolgsTable extends Migration
         Schema::create('bolgs', function (Blueprint $table) {
             $table->id();
             $table->string('image');
+            $table->string('url')->nullable();
             $table->string('title_ar');
             $table->string('title_en');
             $table->longText('description_ar');
